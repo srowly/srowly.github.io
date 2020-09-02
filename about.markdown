@@ -4,15 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Welcome to my site! I'm Sam Rowlands, a Software Developer in Liverpool. I created this site to document everything I'm up to, completing programming challenges, learning new languages and technologies as well as working on more long term projects.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+This site in itself is a project, created using Jekyll, a static site generator written in Ruby and hosted via GitHub pages. It's giving me experience with Ruby and content hosting.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Feel free to browse my projects and past blog posts to get a better idea of the things I'm up to! Cheers
