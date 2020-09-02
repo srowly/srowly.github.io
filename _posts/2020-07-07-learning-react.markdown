@@ -1,11 +1,11 @@
 ---
 layout: post
 title:  "Learning some React Native!"
-date:   2020-02-07 23:07:50 +0000
+date:   2020-07-07 23:07:50 +0000
 categories: Programming Projects
 ---
 
-/*
+I like to learn about new programming languages & methodologies whenever I see them come up. They often seem quite bizzare and alien
 You’ll find this post and others in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
