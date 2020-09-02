@@ -21,7 +21,7 @@
 title: Sam Rowlands
 email: samrowlands90@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A blog showcasing my portfolio, current projects and discussing
+  A blog showcasing my past & current projects and discussing
   programming challenges I've completed!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
