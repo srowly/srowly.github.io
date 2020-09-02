@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-![Me!](/assets/sam.jpg)
+![Me!](/assets/sam2.jpg)
 
 Welcome to my site! I'm Sam Rowlands, a Software Developer in Liverpool. I created this site to document everything I'm up to, completing programming challenges, learning new languages and technologies as well as working on more long term projects.
 
