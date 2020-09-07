@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ruby on Rails Course"
+title:  "Ruby Course"
 date:   2020-08-07 23:07:50 +0000
 categories: Programming Projects
 ---
