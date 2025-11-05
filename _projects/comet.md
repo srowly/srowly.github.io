@@ -1,6 +1,8 @@
+---
 layout: project
 title: "Comet (Personal Project)"
 image_url: "/assets/images/comet.png"
+---
 
 This is where you write about your project!
 
