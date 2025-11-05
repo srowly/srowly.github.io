@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Comet"
+title: "Comet - Unity"
 image_url: "/assets/images/comet.png"
 ---
 
