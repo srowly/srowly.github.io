@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Comet (Personal Project)"
+title: "Comet"
 image_url: "/assets/images/comet.png"
 ---
 
