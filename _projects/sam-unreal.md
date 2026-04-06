@@ -5,18 +5,15 @@ image_url: "/assets/images/sam-unreal.png"
 engine: unreal
 ---
 
-<!-- GIF PLACEHOLDER: Replace the line below with an actual GIF showing the game in action (collecting coins, jumping, camera following, etc.) -->
-![SAM UNREAL gameplay GIF — PLACEHOLDER: replace with actual GIF](/assets/images/sam-unreal-gameplay.gif)
-
----
-
 ## Blueprint Fridays
 
 Our studio ran four consecutive Friday afternoons as a friendly internal competition: every programmer picks up Unreal Engine and builds something from scratch, blueprints only, no C++. At the end, the team votes for their favourite. This was my first time touching Unreal Engine, coming from about a decade of Unity work.
 
 The result? I won. The game was called **SAM UNREAL** — not the most inspired name, but apparently that didn't matter.
 
-![SAM UNREAL screenshot](/assets/images/sam-unreal.png)
+<video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">
+  <source src="/assets/video/sam-unreal.mp4" type="video/mp4">
+</video>
 
 ---
 

@@ -8,13 +8,11 @@ layout: default
   </header>
 
   <div class="post-content">
-    <p>
-      <img 
-        src="{{ page.image_url | relative_url }}" 
-        alt="{{ page.title | escape }}" 
-        style="width: 100%; height: auto; border-radius: 8px; margin-bottom: 20px;"
-      >
-    </p>
+    <img
+      src="{{ page.image_url | relative_url }}"
+      alt="{{ page.title | escape }}"
+      style="width: 100%; height: 320px; object-fit: cover; object-position: center; border-radius: 10px; margin-bottom: 28px; display: block;"
+    >
 
     {{ content }}
 
