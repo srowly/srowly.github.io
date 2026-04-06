@@ -2,6 +2,7 @@
 layout: project
 title: "Comet - Unity"
 image_url: "/assets/images/comet.png"
+engine: unity
 ---
 
 Welcome to the dev blog for Comet!
