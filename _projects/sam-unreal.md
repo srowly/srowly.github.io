@@ -5,11 +5,9 @@ image_url: "/assets/images/sam-unreal.png"
 engine: unreal
 ---
 
-## Blueprint Fridays
-
 Our studio ran four consecutive Friday afternoons as a friendly internal competition: every programmer picks up Unreal Engine and builds something from scratch, blueprints only, no C++. At the end, the team votes for their favourite. This was my first time touching Unreal Engine, coming from about a decade of Unity work.
 
-The result? I won. The game was called **Sam Unreal** — by deadline I had run out of both time and better ideas, so I named it after myself. The whole company voted — programmers, designers, artists — and they picked mine.
+The whole company voted; programmers, designers, artists . The result? I won. The game was called **Sam Unreal** — by deadline I had run out of both time to develop the game and to think of a name. 
 
 <video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">
   <source src="/assets/video/sam-unreal.mp4" type="video/mp4">
@@ -19,9 +17,9 @@ The result? I won. The game was called **Sam Unreal** — by deadline I had run 
 
 ## The Game
 
-SAM UNREAL is a 2.5D platformer: a pixel character dropped into a stylised 3D environment, collecting coins, jumping around, and generally not falling into water.
+Sam Unreal is a 2.5D platformer: a pixel character, let's call him Sam, dropped into a stylised 3D environment, collecting coins whilst completing various platforming challenges.
 
-I originally had intended to create a Paper Mario-style RPG or a top-down Pokémon inspired game. Then the 4 afternoon timeframe reality set in and I made a coin collector.
+I had originally intended to create a Paper Mario-style RPG or a top-down Pokémon inspired game. Then the 4 afternoon timeframe reality set in and I made a coin collector.
 
 **Assets used:**
 
