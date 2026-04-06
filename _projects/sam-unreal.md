@@ -112,9 +112,6 @@ Coming from Unity, I assumed visual scripting would feel limiting pretty quickly
   <div class="bp-slide">
     <img src="/assets/images/blueprint-windmill.png" alt="Windmill Blueprint">
   </div>
-  <div class="bp-slide">
-    <img src="/assets/images/blueprint-hud.png" alt="HUD Blueprint">
-  </div>
   <div class="bp-controls">
     <button class="bp-arrow" onclick="bpNav(-1)">&#8249;</button>
     <p class="bp-caption" id="bpCaption">Coin — overlap detection, sound management, HUD communication, and actor self-disable on collection</p>
@@ -122,7 +119,6 @@ Coming from Unity, I assumed visual scripting would feel limiting pretty quickly
       <span class="bp-pip active" onclick="bpGoTo(0)"></span>
       <span class="bp-pip" onclick="bpGoTo(1)"></span>
       <span class="bp-pip" onclick="bpGoTo(2)"></span>
-      <span class="bp-pip" onclick="bpGoTo(3)"></span>
     </div>
     <button class="bp-arrow" onclick="bpNav(1)">&#8250;</button>
   </div>
@@ -133,8 +129,7 @@ Coming from Unity, I assumed visual scripting would feel limiting pretty quickly
   var captions = [
     "Coin — overlap detection, sound management, HUD communication, and actor self-disable on collection",
     "Character — Enhanced Input System, Spring Arm camera with mouse-driven rotation and scroll-wheel zoom",
-    "Windmill — Event Tick driven rotation with an exposed Speed variable",
-    "HUD — Widget Blueprint displaying the coin counter"
+    "Windmill — Event Tick driven rotation with an exposed Speed variable"
   ];
   var current = 0;
   function update() {
