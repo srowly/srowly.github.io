@@ -7,7 +7,7 @@ engine: unreal
 
 Our studio ran four consecutive Friday afternoons as a friendly internal competition: every programmer picks up Unreal Engine and builds something from scratch, blueprints only, no C++. At the end, the team votes for their favourite. This was my first time touching Unreal Engine, coming from about a decade of Unity work.
 
-The whole company voted; programmers, designers, artists . The result? I won. The game was called **Sam Unreal** — by deadline I had run out of both time to develop the game and to think of a name. 
+The whole company voted: programmers, designers, artists. The result? I won. The game was called **Sam Unreal**. By deadline I had run out of both time to develop the game and to think of a name.
 
 <video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">
   <source src="/assets/video/sam-unreal.mp4" type="video/mp4">
@@ -23,10 +23,10 @@ I had originally intended to create a Paper Mario-style RPG or a top-down Pokém
 
 **Assets used:**
 
-- Environment — [Stylized Provencal](https://www.fab.com/listings/ced19ea1-31ed-437f-ae64-2b6b1561fede) free asset from the Unreal Marketplace, modified to build out the platforming sections
-- Player character — free pixel sprite from [itch.io](https://axulart.itch.io/small-8-direction-characters)
-- Coin — free asset from [OpenGameArt.org](https://opengameart.org/content/coins-pixel-art-silver-gold-crystal-and-more)
-- 2D animation — [PaperZD](https://www.fab.com/listings/6664e3b5-e376-47aa-a0dd-f7bbbd5b93c0) plugin from the Unreal Marketplace
+- Environment: [Stylized Provencal](https://www.fab.com/listings/ced19ea1-31ed-437f-ae64-2b6b1561fede) free asset from the Unreal Marketplace, modified to build out the platforming sections
+- Player character: free pixel sprite from [itch.io](https://axulart.itch.io/small-8-direction-characters)
+- Coin: free asset from [OpenGameArt.org](https://opengameart.org/content/coins-pixel-art-silver-gold-crystal-and-more)
+- 2D animation: [PaperZD](https://www.fab.com/listings/6664e3b5-e376-47aa-a0dd-f7bbbd5b93c0) plugin from the Unreal Marketplace
 
 ---
 
@@ -34,7 +34,7 @@ I had originally intended to create a Paper Mario-style RPG or a top-down Pokém
 
 ### Blueprints are more capable than I expected
 
-Coming from Unity, I assumed visual scripting would feel limiting pretty quickly. It didn't. Everything in this project was handled entirely in Blueprints — the coin pickup logic (overlap detection, sound management, disabling the actor, updating the HUD), the character controller (Enhanced Input System, Spring Arm camera with mouse-driven rotation and scroll-wheel zoom), and even small environment details like the windmill. The node breakdown inside each Blueprint is well structured: each component has its own scope, events are clear entry points, and variables stay readable even as graphs grow. Below are the three main Blueprints from the project.
+Coming from Unity, I assumed visual scripting would feel limiting pretty quickly. It didn't. Everything in this project was handled entirely in Blueprints: the coin pickup logic (overlap detection, sound management, disabling the actor, updating the HUD), the character controller (Enhanced Input System, Spring Arm camera with mouse-driven rotation and scroll-wheel zoom), and even small environment details like the windmill. The node breakdown inside each Blueprint is well structured: each component has its own scope, events are clear entry points, and variables stay readable even as graphs grow. Below are the three main Blueprints from the project.
 
 <style>
 .bp-slideshow {
@@ -102,13 +102,13 @@ Coming from Unity, I assumed visual scripting would feel limiting pretty quickly
 
 <div class="bp-slideshow">
   <div class="bp-slide active">
-    <img src="/assets/images/blueprint-coin.png" alt="Coin Blueprint">
+    <img src="/assets/images/bp_coin.png" alt="Coin Blueprint">
   </div>
   <div class="bp-slide">
-    <img src="/assets/images/blueprint-character.png" alt="Character Blueprint">
+    <img src="/assets/images/bp_topdown_char_blueprint.png" alt="Character Blueprint">
   </div>
   <div class="bp-slide">
-    <img src="/assets/images/blueprint-windmill.png" alt="Windmill Blueprint">
+    <img src="/assets/images/bp_windmill.png" alt="Windmill Blueprint">
   </div>
   <div class="bp-controls">
     <button class="bp-arrow" onclick="bpNav(-1)">&#8249;</button>
@@ -144,13 +144,13 @@ Coming from Unity, I assumed visual scripting would feel limiting pretty quickly
 
 ### Unreal gives you more out of the box
 
-One of the biggest differences I noticed was how much Unreal handles for you by default. When I set up the player character, the base controller was essentially already working — I just needed to layer things on top of it like enabling jump. In Unity, you're much more accustomed to building that kind of thing yourself from scratch. Neither approach is wrong, but the Unreal baseline is high, which matters a lot when you're moving fast.
+One of the biggest differences I noticed was how much Unreal handles for you by default. When I set up the player character, the base controller was essentially already working; I just needed to layer things on top of it like enabling jump. In Unity, you're much more accustomed to building that kind of thing yourself from scratch. Neither approach is wrong, but the Unreal baseline is high, which matters a lot when you're moving fast.
 
 Sounds were also notably easy to add and trigger. No fiddling with AudioSource components and hoping they're attached to the right object.
 
 ### The content browser is a pleasure to use
 
-Small thing, but the tabs and filter system in the Unreal content browser is genuinely nice. Finding assets, filtering by type, switching between content folders — it's faster and more intuitive than I expected.
+Small thing, but the tabs and filter system in the Unreal content browser is genuinely nice. Finding assets, filtering by type, switching between content folders. It's faster and more intuitive than I expected.
 
 ### Some things were harder
 
@@ -158,7 +158,7 @@ Small thing, but the tabs and filter system in the Unreal content browser is gen
 
 **Camera setup with a 2D character in a 3D world** took longer than it should have. Getting the camera to track a Paper2D sprite correctly, at the right distance and angle, in a 3D scene involved more fiddling than I anticipated. By the time it felt right I'd spent more time on it than on some of the actual gameplay mechanics.
 
-**Knowing which Blueprint class to reach for** wasn't always obvious. The distinction between a Pawn, a Character, and an Actor isn't immediately self-evident when you're used to Unity's flat GameObject model, and finding specific objects or components within the scene took some adjustment. I treated it the same way I'd approach an unfamiliar codebase — documentation first, then community resources, then experiment. It works, but the mental model takes time to build.
+**Knowing which Blueprint class to reach for** wasn't always obvious. The distinction between a Pawn, a Character, and an Actor isn't immediately self-evident when you're used to Unity's flat GameObject model, and finding specific objects or components within the scene took some adjustment. I treated it the same way I'd approach an unfamiliar codebase: documentation first, then community resources, then experiment. It works, but the mental model takes time to build.
 
 ### PaperZD is excellent
 
@@ -168,6 +168,6 @@ For anyone doing 2D animation in Unreal: [PaperZD](https://www.fab.com/listings/
 
 ## Takeaway
 
-Four afternoons, one Blueprint-only project, and a win. I came away with genuine respect for what Unreal offers — particularly how much is handled for you, and how well the visual scripting system scales. The rough edges (camera, finding the right Blueprint class, the occasional "why does disabling an actor need three steps") are real, but they're learnable.
+Four afternoons, one Blueprint-only project, and a win. I came away with genuine respect for what Unreal offers, particularly how much is handled for you and how well the visual scripting system scales. The rough edges (camera, finding the right Blueprint class, the occasional "why does disabling an actor need three steps") are real, but they're learnable.
 
-I'm continuing to build in Unreal — next I want to move beyond Blueprints into C++, get comfortable with Unreal's Gameplay Framework at a deeper level, and build something with more scope than a coin collector. More on that as it develops.
+I'm continuing to build in Unreal. Next I want to move beyond Blueprints into C++, get comfortable with Unreal's Gameplay Framework at a deeper level, and build something with more scope than a coin collector. More on that as it develops.
