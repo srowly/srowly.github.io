@@ -25,10 +25,10 @@ I originally had intended to create a Paper Mario-style RPG or a top-down Pokém
 
 **Assets used:**
 
-- Environment — [Stylized Provencal](<!-- PLACEHOLDER: add UE Marketplace link -->) free asset from the Unreal Marketplace, modified to build out the platforming sections
-- Player character — free pixel sprite from [itch.io](<!-- PLACEHOLDER: add specific itch.io link if you have it -->)
-- Coin — free asset from [OpenGameArt.org](https://opengameart.org)
-- 2D animation — [PaperZD](<!-- PLACEHOLDER: add UE Marketplace link -->) plugin from the Unreal Marketplace
+- Environment — [Stylized Provencal](https://www.fab.com/listings/ced19ea1-31ed-437f-ae64-2b6b1561fede) free asset from the Unreal Marketplace, modified to build out the platforming sections
+- Player character — free pixel sprite from [itch.io](https://axulart.itch.io/small-8-direction-characters)
+- Coin — free asset from [OpenGameArt.org](https://opengameart.org/content/coins-pixel-art-silver-gold-crystal-and-more)
+- 2D animation — [PaperZD](https://www.fab.com/listings/6664e3b5-e376-47aa-a0dd-f7bbbd5b93c0) plugin from the Unreal Marketplace
 
 ---
 
@@ -164,7 +164,7 @@ Small thing, but the tabs and filter system in the Unreal content browser is gen
 
 ### PaperZD is excellent
 
-For anyone doing 2D animation in Unreal: [PaperZD](<!-- PLACEHOLDER: add UE Marketplace link -->) is worth using. The editor is clean, the workflow is intuitive, and setting up animation state machines felt faster than I expected. I followed a video tutorial to get the initial setup done, but after that it was easy to build on top of. Easily the best 2D animation tooling I've used in any engine.
+For anyone doing 2D animation in Unreal: [PaperZD](https://www.fab.com/listings/6664e3b5-e376-47aa-a0dd-f7bbbd5b93c0) is worth using. The editor is clean, the workflow is intuitive, and setting up animation state machines felt faster than I expected. I followed a video tutorial to get the initial setup done, but after that it was easy to build on top of. Easily the best 2D animation tooling I've used in any engine.
 
 ---
 
@@ -173,5 +173,3 @@ For anyone doing 2D animation in Unreal: [PaperZD](<!-- PLACEHOLDER: add UE Mark
 Four afternoons, one Blueprint-only project, and a win. I came away with genuine respect for what Unreal offers — particularly how much is handled for you, and how well the visual scripting system scales. The rough edges (camera, finding the right Blueprint class, the occasional "why does disabling an actor need three steps") are real, but they're learnable.
 
 I'm continuing to build in Unreal — next I want to move beyond Blueprints into C++, get comfortable with Unreal's Gameplay Framework at a deeper level, and build something with more scope than a coin collector. More on that as it develops.
-
-<!-- PLACEHOLDER: Add any links to video, itch.io page, or additional screenshots here -->
