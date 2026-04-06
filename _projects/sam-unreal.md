@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "SAM UNREAL - Blueprint Fridays"
+title: "Sam Unreal - Blueprint Fridays"
 image_url: "/assets/images/sam-unreal.png"
 engine: unreal
 ---
@@ -9,7 +9,7 @@ engine: unreal
 
 Our studio ran four consecutive Friday afternoons as a friendly internal competition: every programmer picks up Unreal Engine and builds something from scratch, blueprints only, no C++. At the end, the team votes for their favourite. This was my first time touching Unreal Engine, coming from about a decade of Unity work.
 
-The result? I won. The game was called **SAM UNREAL** — not the most inspired name, but apparently that didn't matter.
+The result? I won. The game was called **Sam Unreal** — by deadline I had run out of both time and better ideas, so I named it after myself. The whole company voted — programmers, designers, artists — and they picked mine.
 
 <video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">
   <source src="/assets/video/sam-unreal.mp4" type="video/mp4">
@@ -19,9 +19,9 @@ The result? I won. The game was called **SAM UNREAL** — not the most inspired 
 
 ## The Game
 
-SAM UNREAL is a 2.5D platformer: a pixel character dropped into a stylised 3D environment, collecting coins, jumping around, and generally not falling into water. Simple premise, which was entirely intentional once I saw how much time I actually had.
+SAM UNREAL is a 2.5D platformer: a pixel character dropped into a stylised 3D environment, collecting coins, jumping around, and generally not falling into water.
 
-I originally had ideas about a Paper Mario-style RPG or a top-down Pokémon-ish thing. Then reality set in and I made a coin collector. No regrets.
+I originally had intended to create a Paper Mario-style RPG or a top-down Pokémon inspired game. Then the 4 afternoon timeframe reality set in and I made a coin collector.
 
 **Assets used:**
 
@@ -36,7 +36,118 @@ I originally had ideas about a Paper Mario-style RPG or a top-down Pokémon-ish 
 
 ### Blueprints are more capable than I expected
 
-Coming from Unity, I assumed visual scripting would feel limiting pretty quickly. It didn't. Everything in this project — collisions, UI, controls, camera logic, sounds — was done entirely in Blueprints. The node breakdown inside each Blueprint is genuinely well designed: you open it up, see each component clearly, add events, create variables scoped to specific components. It's structured in a way that keeps things readable even when complexity starts to creep in.
+Coming from Unity, I assumed visual scripting would feel limiting pretty quickly. It didn't. Everything in this project was handled entirely in Blueprints — the coin pickup logic (overlap detection, sound management, disabling the actor, updating the HUD), the character controller (Enhanced Input System, Spring Arm camera with mouse-driven rotation and scroll-wheel zoom), and even small environment details like the windmill. The node breakdown inside each Blueprint is well structured: each component has its own scope, events are clear entry points, and variables stay readable even as graphs grow. Below are the three main Blueprints from the project.
+
+<style>
+.bp-slideshow {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 24px 0 32px;
+  user-select: none;
+}
+.bp-slide { display: none; }
+.bp-slide.active { display: block; }
+.bp-slide img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  display: block;
+  background: #111;
+}
+.bp-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px 12px;
+  gap: 12px;
+}
+.bp-caption {
+  flex: 1;
+  font-size: 0.8em;
+  color: #aaa;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+.bp-arrow {
+  background: none;
+  border: 1px solid #444;
+  color: #aaa;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1em;
+  cursor: pointer;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: border-color 0.15s, color 0.15s;
+}
+.bp-arrow:hover { border-color: #888; color: #fff; }
+.bp-pips {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
+}
+.bp-pip {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #444;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.bp-pip.active { background: #aaa; }
+</style>
+
+<div class="bp-slideshow">
+  <div class="bp-slide active">
+    <img src="/assets/images/blueprint-coin.png" alt="Coin Blueprint">
+  </div>
+  <div class="bp-slide">
+    <img src="/assets/images/blueprint-character.png" alt="Character Blueprint">
+  </div>
+  <div class="bp-slide">
+    <img src="/assets/images/blueprint-windmill.png" alt="Windmill Blueprint">
+  </div>
+  <div class="bp-slide">
+    <img src="/assets/images/blueprint-hud.png" alt="HUD Blueprint">
+  </div>
+  <div class="bp-controls">
+    <button class="bp-arrow" onclick="bpNav(-1)">&#8249;</button>
+    <p class="bp-caption" id="bpCaption">Coin — overlap detection, sound management, HUD communication, and actor self-disable on collection</p>
+    <div class="bp-pips">
+      <span class="bp-pip active" onclick="bpGoTo(0)"></span>
+      <span class="bp-pip" onclick="bpGoTo(1)"></span>
+      <span class="bp-pip" onclick="bpGoTo(2)"></span>
+      <span class="bp-pip" onclick="bpGoTo(3)"></span>
+    </div>
+    <button class="bp-arrow" onclick="bpNav(1)">&#8250;</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var captions = [
+    "Coin — overlap detection, sound management, HUD communication, and actor self-disable on collection",
+    "Character — Enhanced Input System, Spring Arm camera with mouse-driven rotation and scroll-wheel zoom",
+    "Windmill — Event Tick driven rotation with an exposed Speed variable",
+    "HUD — Widget Blueprint displaying the coin counter"
+  ];
+  var current = 0;
+  function update() {
+    var slides = document.querySelectorAll('.bp-slide');
+    var pips = document.querySelectorAll('.bp-pip');
+    slides.forEach(function(s, i) { s.classList.toggle('active', i === current); });
+    pips.forEach(function(p, i) { p.classList.toggle('active', i === current); });
+    document.getElementById('bpCaption').textContent = captions[current];
+  }
+  window.bpNav = function(dir) { current = (current + dir + captions.length) % captions.length; update(); };
+  window.bpGoTo = function(i) { current = i; update(); };
+})();
+</script>
 
 ### Unreal gives you more out of the box
 
@@ -54,7 +165,7 @@ Small thing, but the tabs and filter system in the Unreal content browser is gen
 
 **Camera setup with a 2D character in a 3D world** took longer than it should have. Getting the camera to track a Paper2D sprite correctly, at the right distance and angle, in a 3D scene involved more fiddling than I anticipated. By the time it felt right I'd spent more time on it than on some of the actual gameplay mechanics.
 
-**Knowing which Blueprint class to reach for** wasn't always obvious. Blueprint names don't always tell you what they're for, and finding specific objects or components within the scene took some adjustment. A fair amount of my time was spent watching YouTube videos and pulling individual nodes from tutorials. That's normal for any first project in a new engine, but it's worth noting if you're used to Unity's documentation and how it maps to code.
+**Knowing which Blueprint class to reach for** wasn't always obvious. The distinction between a Pawn, a Character, and an Actor isn't immediately self-evident when you're used to Unity's flat GameObject model, and finding specific objects or components within the scene took some adjustment. I treated it the same way I'd approach an unfamiliar codebase — documentation first, then community resources, then experiment. It works, but the mental model takes time to build.
 
 ### PaperZD is excellent
 
@@ -66,6 +177,6 @@ For anyone doing 2D animation in Unreal: [PaperZD](<!-- PLACEHOLDER: add UE Mark
 
 Four afternoons, one Blueprint-only project, and a win. I came away with genuine respect for what Unreal offers — particularly how much is handled for you, and how well the visual scripting system scales. The rough edges (camera, finding the right Blueprint class, the occasional "why does disabling an actor need three steps") are real, but they're learnable.
 
-I'm continuing to build in Unreal. More on that as it develops.
+I'm continuing to build in Unreal — next I want to move beyond Blueprints into C++, get comfortable with Unreal's Gameplay Framework at a deeper level, and build something with more scope than a coin collector. More on that as it develops.
 
 <!-- PLACEHOLDER: Add any links to video, itch.io page, or additional screenshots here -->
