@@ -6,8 +6,63 @@ engine: unity
 order: 2
 ---
 
-Border Bots VR is a multi-platform virtual reality game released on SteamVR, PSVR2, and Meta Quest, co-published with Team17. I served as lead gameplay developer across the full production cycle, from early prototyping through to certification and launch on all three platforms.
+Border Bots VR is a fully released multi-platform virtual reality game, co-published with **Team17**, one of the UK's leading games publishers. Released on SteamVR, PSVR2, and Meta Quest, I served as lead gameplay developer across the full production cycle, from early prototyping through to certification and launch on all three platforms.
 
+<style>
+.release-badges {
+  display: flex;
+  gap: 14px;
+  margin: 28px 0;
+  flex-wrap: wrap;
+}
+.release-badge {
+  flex: 1;
+  min-width: 140px;
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 16px 18px;
+  text-align: center;
+}
+.release-badge .store {
+  font-size: 0.7em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 6px;
+}
+.release-badge .score {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+.release-badge .verdict {
+  font-size: 0.72em;
+  color: #22c55e;
+  font-weight: 600;
+  margin-top: 4px;
+}
+</style>
+
+<div class="release-badges">
+  <div class="release-badge">
+    <div class="store">Steam</div>
+    <div class="score">Very Positive</div>
+    <div class="verdict">65 reviews</div>
+  </div>
+  <div class="release-badge">
+    <div class="store">PlayStation Store</div>
+    <div class="score">4.51 / 5</div>
+    <div class="verdict">150 ratings</div>
+  </div>
+  <div class="release-badge">
+    <div class="store">Meta Quest Store</div>
+    <div class="score">4.3 / 5</div>
+    <div class="verdict">174 reviews</div>
+  </div>
+</div>
 
 <video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">
   <source src="/assets/video/border-bots-vr.mp4" type="video/mp4">
@@ -80,11 +135,5 @@ I worked across all three platform targets throughout the project, not just at t
 Co-publishing with **Team17** added a layer of external scrutiny to the process that I found valuable. Meeting their standards for certification readiness and quality bar across platforms is not trivial, and shipping through that pipeline on a title that reviewed this well is something I'm proud of.
 
 ---
-
-## Reception
-
-- **Steam:** Very Positive (65 reviews)
-- **PlayStation Store:** 4.51 / 5 (150 ratings)
-- **Meta Quest Store:** 4.3 / 5 (174 reviews)
 
 Consistent positive reception across all three storefronts, across very different player communities with different expectations of VR, is the kind of validation that matters. The systems I built are the ones players spend the most time with: the UI, the tools, the inspection loop. That those systems held up is something I'm genuinely pleased about.

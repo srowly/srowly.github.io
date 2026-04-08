@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Comet"
-image_url: "/assets/images/comet.png"
+image_url: "/assets/images/comet-2.png"
 engine: unity
 order: 1
 ---
@@ -19,9 +19,13 @@ The game combines the genres we love: survival, homestead building, and a story-
 
 *[Your second devlog entry goes here.]*
 
+![Comet — current state](/assets/images/comet-2.png)
+
 ---
 
 <a name="devlog-1"></a>
 ## Devlog #1 — The Beginning
 
 *[Your first devlog entry goes here.]*
+
+![Comet — early development](/assets/images/comet-1.png)
