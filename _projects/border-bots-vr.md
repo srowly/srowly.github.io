@@ -24,7 +24,7 @@ The game launched to strong reviews: **Very Positive on Steam**, **4.51 out of 5
 
 ## My Role
 
-I was the lead gameplay developer on Border Bots VR. That meant owning the core interaction systems end to end: designing them, building them, iterating on them with the team, and making sure they held together across three very different platforms with different controllers, tracking models, and performance budgets.
+I was a lead gameplay developer on Border Bots VR. That meant owning the core interaction systems end to end: designing them, building them, iterating on them with the team, and making sure they held together across three very different platforms with different controllers, tracking models, and performance budgets.
 
 The work ranged from high-level system architecture down to the kind of per-platform feel tuning that you only discover by putting the headset on and testing it yourself.
 
@@ -32,7 +32,7 @@ The work ranged from high-level system architecture down to the kind of per-plat
 
 ## SamOS
 
-The headline feature of my work on Border Bots VR is **SamOS**: the in-world UI system that drives almost everything in the game. The name came from the team. It stuck.
+The headline feature of my work on Border Bots VR is **SamOS**: the in-world UI system that drives almost everything in the game. The name came from the team.
 
 The premise was that every piece of UI the player interacts with should exist inside the world itself rather than floating in screen space. No traditional menus. No HUDs. Instead, the player's workstation is equipped with an in-world computer terminal and a handheld tablet. Both are fully interactive VR objects. Every system the player needs to do their job runs through one of those two surfaces.
 
@@ -48,7 +48,7 @@ The computer terminal and tablet together handle the full gameplay loop:
 
 Building SamOS meant solving a specific VR UI problem: flat interfaces designed for screens don't translate cleanly into three-dimensional space, especially across platforms with different controller schemes. Everything had to be readable in a headset at varying angles, responsive to natural VR hand positioning, and performant enough not to introduce hitching on the more constrained hardware. Getting that right across Quest, PSVR2, and SteamVR was one of the more demanding parts of the project.
 
-The result was a system the team cared enough about to name after me, which I'll take.
+The result was a system the team cared enough about to name after me which I was very proud of.
 
 ---
 
