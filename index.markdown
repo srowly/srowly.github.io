@@ -10,6 +10,7 @@ permalink: /
   line-height: 1.7;
   margin-bottom: 40px;
   max-width: 700px;
+  text-align: justify;
 }
 
 /* ── Engine selector cards ────────────────────────────────── */
