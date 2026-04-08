@@ -104,13 +104,13 @@ Coming from Unity, I assumed visual scripting would feel limiting pretty quickly
 
 <div class="bp-slideshow">
   <div class="bp-slide active">
-    <img src="/assets/images/bp_coin.png" alt="Coin Blueprint">
+    <img src="/assets/images/blueprint-coin.png" alt="Coin Blueprint">
   </div>
   <div class="bp-slide">
-    <img src="/assets/images/bp_topdown_char_blueprint.png" alt="Character Blueprint">
+    <img src="/assets/images/blueprint-character.png" alt="Character Blueprint">
   </div>
   <div class="bp-slide">
-    <img src="/assets/images/bp_windmill.png" alt="Windmill Blueprint">
+    <img src="/assets/images/blueprint-windmill.png" alt="Windmill Blueprint">
   </div>
   <div class="bp-controls">
     <button class="bp-arrow" onclick="bpNav(-1)">&#8249;</button>
