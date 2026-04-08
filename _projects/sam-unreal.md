@@ -3,6 +3,7 @@ layout: project
 title: "Sam Unreal - Blueprint Fridays"
 image_url: "/assets/images/sam-unreal.png"
 engine: unreal
+order: 1
 ---
 
 Our studio ran four consecutive Friday afternoons as a friendly internal competition: every programmer picks up Unreal Engine and builds something from scratch, blueprints only, no C++. At the end, the team votes for their favourite. This was my first time touching Unreal Engine, coming from about a decade of Unity work.

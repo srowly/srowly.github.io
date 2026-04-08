@@ -124,6 +124,27 @@ permalink: /projects/
   margin: 0;
   font-size: 1.1em;
 }
+
+/* ── Latest badge ─────────────────────────────────────────── */
+.project-thumb-wrap {
+  position: relative;
+}
+
+.badge-latest {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #22c55e;
+  color: #fff;
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  line-height: 1.4;
+  pointer-events: none;
+}
 </style>
 
 <div class="engine-selector">
@@ -139,30 +160,34 @@ permalink: /projects/
 
 <div id="panel-unity" class="engine-panel active">
   <ul class="project-grid">
-    {% for project in site.projects %}
-      {% if project.engine == "unity" %}
+    {% assign unity_projects = site.projects | where: "engine", "unity" | sort: "order" %}
+    {% for project in unity_projects %}
       <li class="project-grid-item">
         <a href="{{ project.url | relative_url }}">
-          <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
+          <div class="project-thumb-wrap">
+            <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
+            {% if forloop.first %}<span class="badge-latest">Latest</span>{% endif %}
+          </div>
           <h3>{{ project.title }}</h3>
         </a>
       </li>
-      {% endif %}
     {% endfor %}
   </ul>
 </div>
 
 <div id="panel-unreal" class="engine-panel">
   <ul class="project-grid">
-    {% for project in site.projects %}
-      {% if project.engine == "unreal" %}
+    {% assign unreal_projects = site.projects | where: "engine", "unreal" | sort: "order" %}
+    {% for project in unreal_projects %}
       <li class="project-grid-item">
         <a href="{{ project.url | relative_url }}">
-          <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
+          <div class="project-thumb-wrap">
+            <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
+            {% if forloop.first %}<span class="badge-latest">Latest</span>{% endif %}
+          </div>
           <h3>{{ project.title }}</h3>
         </a>
       </li>
-      {% endif %}
     {% endfor %}
   </ul>
 </div>

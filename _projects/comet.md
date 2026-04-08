@@ -3,12 +3,20 @@ layout: project
 title: "Comet"
 image_url: "/assets/images/comet.png"
 engine: unity
+order: 1
 ---
 
-Welcome to the dev blog for Comet!
+Comet is a post-apocalyptic survival and base-building game in development. A passion project built by a small team of three: myself (Sam) and Alex on programming, with Ian on art.
 
-This is a passion project being brought to life in Unity by a small team of three friends: myself (Sam) and Alex on programming, with Ian bringing our world to life with his art.
+The game combines the genres we love: survival, homestead building, and a story-driven world that feels dangerous out there but cozy and safe once you're home. We're drawing on a shared interest in survival, prepping, and camping to build something that has real stakes and real warmth at the same time.
 
-We set out to make a game that combines all the genres we love: it's a post-apocalyptic survival and base-building game that is heavily story and character-driven. We're drawing inspiration from our shared interests in survival, prepping, and camping to build a world that feels scary and dangerous, but cozy and safe at your homestead with a community you build.
+This page is the dev blog. Updates are numbered, not dated. New entries appear at the top.
 
-This page will serve as a dev blog, where I'll post updates, share our progress, and talk about the development process.
+**Entries:** [#1 — The Beginning](#devlog-1)
+
+---
+
+<a name="devlog-1"></a>
+## Devlog #1 — The Beginning
+
+*[Your first devlog entry goes here.]*
