@@ -158,7 +158,7 @@ permalink: /
 }
 </style>
 
-<p class="bio">I'm a Senior Programmer with a decade of experience in multi-platform game development, highly skilled in <strong>Unity</strong> and <strong>C#</strong> and actively learning <strong>Unreal Engine</strong> in my spare time alongside my hobby project <strong>Comet</strong>. I'm currently working on an unannounced title with <strong>Team17</strong>, and previously served as lead programmer on <strong>Border Bots VR</strong>, co-published with Team17 and released across Steam, PSVR2, and Meta Quest to strong reviews on all three platforms. I hold an <strong>MSc in Computer Science with Distinction</strong> from the University of Liverpool.</p>
+<p class="bio">I'm a Senior Programmer with a decade of experience in multi-platform game development, highly skilled in <strong>Unity</strong> and <strong>C#</strong> and actively learning <strong>Unreal Engine</strong> in my spare time alongside my hobby project <strong>Comet</strong>. I'm currently working at vTime Games on an unannounced title in partnership with <strong>Team17</strong>, before that on <strong>Border Bots VR</strong>, a video game co-published with Team17 and released across Steam, PSVR2, and Meta Quest to strong reviews on all three platforms. I hold an <strong>MSc in Computer Science with Distinction</strong> from the University of Liverpool.</p>
 
 <div class="engine-selector">
   <button class="engine-card active" data-engine="unity" onclick="switchEngine(this, 'unity')">
