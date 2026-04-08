@@ -37,7 +37,7 @@ permalink: /
 }
 
 .engine-card.inactive {
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .engine-card:hover {
@@ -217,4 +217,8 @@ function switchEngine(btn, engine) {
   btn.classList.remove('inactive');
   document.getElementById('panel-' + engine).classList.add('active');
 }
+
+document.querySelectorAll('.engine-card:not(.active)').forEach(function(c) {
+  c.classList.add('inactive');
+});
 </script>
