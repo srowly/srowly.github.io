@@ -23,6 +23,13 @@ Border Bots VR is a fully released multi-platform virtual reality game, co-publi
   border-radius: 10px;
   padding: 16px 18px;
   text-align: center;
+  text-decoration: none;
+  display: block;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.release-badge:hover {
+  background: #1a1a1a;
+  border-color: #555;
 }
 .release-badge .store {
   font-size: 0.7em;
@@ -47,21 +54,21 @@ Border Bots VR is a fully released multi-platform virtual reality game, co-publi
 </style>
 
 <div class="release-badges">
-  <div class="release-badge">
+  <a class="release-badge" href="https://store.steampowered.com/app/874440/Border_Bots_VR/" target="_blank" rel="noopener">
     <div class="store">Steam</div>
     <div class="score">Very Positive</div>
     <div class="verdict">65 reviews</div>
-  </div>
-  <div class="release-badge">
+  </a>
+  <a class="release-badge" href="https://store.playstation.com/en-gb/product/EP4064-PPSA14013_00-0101809530937237" target="_blank" rel="noopener">
     <div class="store">PlayStation Store</div>
     <div class="score">4.51 / 5</div>
     <div class="verdict">150 ratings</div>
-  </div>
-  <div class="release-badge">
+  </a>
+  <a class="release-badge" href="https://www.meta.com/en-gb/experiences/border-bots-vr/4382981625162620/" target="_blank" rel="noopener">
     <div class="store">Meta Quest Store</div>
     <div class="score">4.3 / 5</div>
     <div class="verdict">174 reviews</div>
-  </div>
+  </a>
 </div>
 
 <video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">

@@ -33,7 +33,11 @@ permalink: /
   color: #fff;
   cursor: pointer;
   font-family: inherit;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.engine-card.inactive {
+  opacity: 0.4;
 }
 
 .engine-card:hover {
@@ -204,9 +208,13 @@ permalink: /
 
 <script>
 function switchEngine(btn, engine) {
-  document.querySelectorAll('.engine-card').forEach(function(c) { c.classList.remove('active'); });
+  document.querySelectorAll('.engine-card').forEach(function(c) {
+    c.classList.remove('active');
+    c.classList.add('inactive');
+  });
   document.querySelectorAll('.engine-panel').forEach(function(p) { p.classList.remove('active'); });
   btn.classList.add('active');
+  btn.classList.remove('inactive');
   document.getElementById('panel-' + engine).classList.add('active');
 }
 </script>
