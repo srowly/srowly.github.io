@@ -28,6 +28,7 @@ github_username:  srowly
 linkedin_username: srowlands1
 # Build settings
 theme: minima
+header_pages: []
 plugins:
   - jekyll-feed
 
