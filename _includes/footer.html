@@ -1,11 +1,13 @@
 <footer class="site-footer">
   <div class="wrapper">
-    <div style="color: #828282; font-size: 0.8em; margin-bottom: 8px;">&copy; {{ 'now' | date: "%Y" }} Sam Rowlands</div>
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-      <span style="color: #828282; font-size: 0.9375em;">{{ site.description | escape }}</span>
-      <div style="display: flex; align-items: center; gap: 8px;">
+      <div>
+        <div style="color: #828282; font-size: 0.9375em; margin-bottom: 4px;">{{ site.description | escape }}</div>
+        <div style="color: #828282; font-size: 0.8em;">&copy; {{ 'now' | date: "%Y" }} Sam Rowlands</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
         {%- include social.html -%}
-        <a href="mailto:{{ site.email }}" title="{{ site.email }}" style="display: inline-block; vertical-align: middle;">
+        <a href="mailto:{{ site.email }}" title="{{ site.email }}" style="display: inline-flex; align-items: center;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#828282" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="4" width="20" height="16" rx="2"/>
             <polyline points="2,4 12,13 22,4"/>
@@ -15,3 +17,19 @@
     </div>
   </div>
 </footer>
+
+<style>
+.site-footer .social-media-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer .social-media-list li {
+  margin: 0;
+  padding: 0;
+}
+</style>
