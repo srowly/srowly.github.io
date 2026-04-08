@@ -10,9 +10,14 @@ Comet is a post-apocalyptic survival and base-building game in development. A pa
 
 The game combines the genres we love: survival, homestead building, and a story-driven world that feels dangerous out there but cozy and safe once you're home. We're drawing on a shared interest in survival, prepping, and camping to build something that has real stakes and real warmth at the same time.
 
-This page is the dev blog. Updates are numbered, not dated. New entries appear at the top.
+**Entries:** [#2 — Second Entry](#devlog-2) · [#1 — The Beginning](#devlog-1)
 
-**Entries:** [#1 — The Beginning](#devlog-1)
+---
+
+<a name="devlog-2"></a>
+## Devlog #2 — Second Entry
+
+*[Your second devlog entry goes here.]*
 
 ---
 
