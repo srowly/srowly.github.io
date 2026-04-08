@@ -6,7 +6,7 @@ engine: unity
 order: 2
 ---
 
-Border Bots VR is a fully released multi-platform virtual reality game, co-published with **Team17**, one of the UK's leading games publishers. Released on SteamVR, PSVR2, and Meta Quest, I served as lead gameplay developer across the full production cycle, from early prototyping through to certification and launch on all three platforms.
+Border Bots VR is a fully released multi-platform virtual reality game, co-published with **Team17**, one of the UK's leading games publishers. Released on SteamVR, PSVR2, and Meta Quest, I served as a lead programmer across the full production cycle, from early prototyping through to certification and launch on all three platforms.
 
 <style>
 .release-badges {
@@ -80,7 +80,7 @@ The game launched to strong reviews: **Very Positive on Steam**, **4.51 out of 5
 
 ## My Role
 
-I was a lead gameplay developer on Border Bots VR. That meant owning the core interaction systems end to end: designing them, building them, iterating on them with the team, and making sure they held together across three very different platforms with different controllers, tracking models, and performance budgets.
+I was a lead programmer on Border Bots VR. That meant owning the core interaction systems end to end: designing them, building them, iterating on them with the team, and making sure they held together across three very different platforms with different controllers, tracking models, and performance budgets.
 
 The work ranged from high-level system architecture down to the kind of per-platform feel tuning that you only discover by putting the headset on and testing it yourself.
 
