@@ -7,12 +7,10 @@ engine: unity
 
 Border Bots VR is a multi-platform virtual reality game released on SteamVR, PSVR2, and Meta Quest, co-published with Team17. I served as lead gameplay developer across the full production cycle, from early prototyping through to certification and launch on all three platforms.
 
-<!-- VIDEO PLACEHOLDER: add your gameplay footage to /assets/video/border-bots-vr.mp4 and uncomment the block below -->
-<!--
+
 <video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">
   <source src="/assets/video/border-bots-vr.mp4" type="video/mp4">
 </video>
--->
 
 ---
 

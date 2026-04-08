@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Comet - Unity"
+title: "Comet"
 image_url: "/assets/images/comet.png"
 engine: unity
 ---
