@@ -1,18 +1,19 @@
 ---
 layout: project
-title: "Sam Unreal - Blueprint Fridays"
+title: "Sam Unreal"
 image_url: "/assets/images/sam-unreal.png"
 engine: unreal
 order: 1
+hide_header_image: true
 ---
+
+<video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 0 0 24px;">
+  <source src="/assets/video/sam-unreal.mp4" type="video/mp4">
+</video>
 
 Our studio ran four consecutive Friday afternoons as a friendly internal competition: every programmer picks up Unreal Engine and builds something from scratch, blueprints only, no C++. At the end, the team votes for their favourite. This was my first time touching Unreal Engine, coming from about a decade of Unity work.
 
 The whole company voted: programmers, designers, artists. The result? I won. The game was called **Sam Unreal**. By deadline I had run out of both time to develop the game and to think of a name.
-
-<video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">
-  <source src="/assets/video/sam-unreal.mp4" type="video/mp4">
-</video>
 
 ---
 

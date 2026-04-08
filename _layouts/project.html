@@ -8,11 +8,13 @@ layout: default
   </header>
 
   <div class="post-content">
+    {% unless page.hide_header_image %}
     <img
       src="{{ page.image_url | relative_url }}"
       alt="{{ page.title | escape }}"
       style="width: 100%; height: 320px; object-fit: cover; object-position: center; border-radius: 10px; margin-bottom: 28px; display: block;"
     >
+    {% endunless %}
 
     {{ content }}
 
