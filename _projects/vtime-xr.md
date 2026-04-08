@@ -8,7 +8,7 @@ order: 3
 
 vTime XR was my first job as a programmer out of university, and looking back it was a remarkable place to start. vTime was one of the original social VR applications: a shared virtual space where people could meet, talk, and hang out in VR. This was before Meta had a social platform, before VRChat or Rec Room had taken off. We were building something genuinely new.
 
-I was there for about three years, working across the full breadth of the application.
+I worked on this for just over three years, working across the full breadth of the application.
 
 <video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 24px 0;">
   <source src="/assets/video/vtimexr.mp4" type="video/mp4">
