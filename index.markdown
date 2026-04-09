@@ -92,6 +92,14 @@ permalink: /
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.project-grid-item[data-engine="unity"] a {
+  border-top: 3px solid #157efb;
+}
+
+.project-grid-item[data-engine="unreal"] a {
+  border-top: 3px solid #c0392b;
+}
+
 .project-grid-item a:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -119,11 +127,25 @@ permalink: /
   font-weight: 600;
 }
 
-.project-engine-icon {
-  width: 15px;
-  height: 15px;
-  opacity: 0.35;
+.engine-pill {
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
   flex-shrink: 0;
+}
+
+.engine-pill.unity {
+  background: #e8f1ff;
+  color: #157efb;
+}
+
+.engine-pill.unreal {
+  background: #fce8e8;
+  color: #c0392b;
 }
 
 /* ── Latest badge ─────────────────────────────────────────── */
@@ -171,7 +193,7 @@ permalink: /
       </div>
       <div class="project-title-bar">
         <h3>{{ project.title }}</h3>
-        <img src="https://cdn.simpleicons.org/unity/111111" alt="Unity" class="project-engine-icon">
+        <span class="engine-pill unity">Unity</span>
       </div>
     </a>
   </li>
@@ -186,7 +208,7 @@ permalink: /
       </div>
       <div class="project-title-bar">
         <h3>{{ project.title }}</h3>
-        <img src="https://cdn.simpleicons.org/unrealengine/111111" alt="Unreal Engine" class="project-engine-icon">
+        <span class="engine-pill unreal">Unreal</span>
       </div>
     </a>
   </li>
