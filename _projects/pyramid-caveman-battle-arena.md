@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Pyramid Caveman Battle Arena"
-image_url: "/assets/images/pcba-header.jpg"
+image_url: "/assets/images/pcba-header.png"
 engine: unity
 order: 4
 type: personal
