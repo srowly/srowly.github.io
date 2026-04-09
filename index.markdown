@@ -105,7 +105,7 @@ permalink: /
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.project-grid-item .thumb img {
+.project-grid-item .project-thumb-wrap img {
   width: 100%;
   height: 200px;
   object-fit: cover;
