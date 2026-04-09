@@ -35,4 +35,4 @@ We're also using Comet as an opportunity to work with as many modern Unity featu
 
 In terms of what's actually in and working: we have a save and load system built on JSON, farmable tiles and crops, trees that can be felled with an axe, an inventory system, a dialogue system, and a day/night cycle that shifts the light source and takes the world dark. It's a solid foundation and it already feels like a place worth being in.
 
-Next up: Sam is moving onto the UI using Unity's new UI Toolkit, and Alex is working on shadows and a house interior to better sell the day/night cycle. More soon.
+Next up: Sam is moving onto the UI using Unity's new UI Toolkit, and Alex is working on shadows and a house interior to better sell the day/night cycle. Ian meanwhile has no shortage of work ahead of him: in-game visuals, all UI artwork, and the full suite of character and world animations are all on his plate. More soon.
