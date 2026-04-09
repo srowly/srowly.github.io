@@ -5,6 +5,7 @@ permalink: /
 ---
 
 <style>
+/* ── Bio ──────────────────────────────────────────────────── */
 .bio {
   font-size: 1.05em;
   line-height: 1.7;
@@ -12,98 +13,73 @@ permalink: /
   text-align: justify;
 }
 
-/* ── Engine selector cards ────────────────────────────────── */
-.engine-selector {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 40px;
+/* ── Filter bar ───────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 32px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 4px;
+  width: fit-content;
 }
 
-.engine-card {
-  display: flex;
-  flex-direction: column;
+.filter-tab {
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
-  padding: 32px 20px 28px;
-  border-radius: 12px;
-  border: 2px solid transparent;
-  background: #111;
-  color: #fff;
+  gap: 7px;
+  padding: 7px 16px;
+  border-radius: 7px;
+  border: none;
+  background: transparent;
+  color: #777;
   cursor: pointer;
   font-family: inherit;
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
-}
-
-.engine-card.inactive {
-  opacity: 0.6;
-}
-
-.engine-card:hover {
-  background: #1e1e1e;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-}
-
-.engine-card img {
-  width: 56px;
-  height: 56px;
-  display: block;
-}
-
-.engine-card-name {
   font-size: 0.85em;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #ccc;
-  transition: color 0.2s ease;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
 }
 
-/* Per-engine active accent colours */
-.engine-card[data-engine="unity"].active {
-  border-color: #157efb;
-  background: #0d1b2e;
-  box-shadow: 0 8px 28px rgba(21, 126, 251, 0.2);
+.filter-tab img {
+  width: 14px;
+  height: 14px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
 }
 
-.engine-card[data-engine="unity"].active .engine-card-name {
-  color: #5aaeff;
+.filter-tab.active {
+  background: #fff;
+  color: #111;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }
 
-.engine-card[data-engine="unreal"].active {
-  border-color: #b00;
-  background: #1e0a0a;
-  box-shadow: 0 8px 28px rgba(180, 0, 0, 0.2);
+.filter-tab.active img {
+  opacity: 1;
 }
 
-.engine-card[data-engine="unreal"].active .engine-card-name {
-  color: #ff6b6b;
-}
-
-@media (max-width: 480px) {
-  .engine-selector {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ── Panels ───────────────────────────────────────────────── */
-.engine-panel {
-  display: none;
-}
-
-.engine-panel.active {
-  display: block;
+.filter-tab:hover:not(.active) {
+  color: #333;
 }
 
 /* ── Project grid ─────────────────────────────────────────── */
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.project-grid-item {
+  transition: opacity 0.2s ease;
+}
+
+.project-grid-item.hidden {
+  display: none;
 }
 
 .project-grid-item a {
@@ -121,7 +97,7 @@ permalink: /
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.project-grid-item img {
+.project-grid-item .thumb img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -129,11 +105,25 @@ permalink: /
   background-color: #f0f0f0;
 }
 
-.project-grid-item h3 {
-  text-align: center;
-  padding: 15px 10px;
+.project-title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  gap: 8px;
+}
+
+.project-title-bar h3 {
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1.05em;
+  font-weight: 600;
+}
+
+.project-engine-icon {
+  width: 15px;
+  height: 15px;
+  opacity: 0.35;
+  flex-shrink: 0;
 }
 
 /* ── Latest badge ─────────────────────────────────────────── */
@@ -160,64 +150,59 @@ permalink: /
 
 <p class="bio">I'm a Senior Programmer with a decade of experience in multi-platform game development, highly skilled in <strong>Unity</strong> and <strong>C#</strong> and actively learning <strong>Unreal Engine</strong> in my spare time alongside my hobby project <strong>Comet</strong>. I'm currently working at vTime Games on an unannounced title in partnership with <strong>Team17</strong>, before that on <strong>Border Bots VR</strong>, a video game co-published with Team17 and released across Steam, PSVR2, and Meta Quest to strong reviews on all three platforms. I hold an <strong>MSc in Computer Science with Distinction</strong> from the University of Liverpool.</p>
 
-<div class="engine-selector">
-  <button class="engine-card active" data-engine="unity" onclick="switchEngine(this, 'unity')">
-    <img src="https://cdn.simpleicons.org/unity/ffffff" alt="Unity logo">
-    <span class="engine-card-name">Unity</span>
+<div class="filter-bar">
+  <button class="filter-tab active" data-filter="all" onclick="filterProjects(this, 'all')">All Projects</button>
+  <button class="filter-tab" data-filter="unity" onclick="filterProjects(this, 'unity')">
+    <img src="https://cdn.simpleicons.org/unity/111111" alt="">Unity
   </button>
-  <button class="engine-card" data-engine="unreal" onclick="switchEngine(this, 'unreal')">
-    <img src="https://cdn.simpleicons.org/unrealengine/ffffff" alt="Unreal Engine logo">
-    <span class="engine-card-name">Unreal Engine</span>
+  <button class="filter-tab" data-filter="unreal" onclick="filterProjects(this, 'unreal')">
+    <img src="https://cdn.simpleicons.org/unrealengine/111111" alt="">Unreal Engine
   </button>
 </div>
 
-<div id="panel-unity" class="engine-panel active">
-  <ul class="project-grid">
-    {% assign unity_projects = site.projects | where: "engine", "unity" | sort: "order" %}
-    {% for project in unity_projects %}
-      <li class="project-grid-item">
-        <a href="{{ project.url | relative_url }}">
-          <div class="project-thumb-wrap">
-            <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
-            {% if forloop.first %}<span class="badge-latest">Latest</span>{% endif %}
-          </div>
-          <h3>{{ project.title }}</h3>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-<div id="panel-unreal" class="engine-panel">
-  <ul class="project-grid">
-    {% assign unreal_projects = site.projects | where: "engine", "unreal" | sort: "order" %}
-    {% for project in unreal_projects %}
-      <li class="project-grid-item">
-        <a href="{{ project.url | relative_url }}">
-          <div class="project-thumb-wrap">
-            <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
-            {% if forloop.first %}<span class="badge-latest">Latest</span>{% endif %}
-          </div>
-          <h3>{{ project.title }}</h3>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="project-grid">
+  {% assign unity_projects = site.projects | where: "engine", "unity" | sort: "order" %}
+  {% for project in unity_projects %}
+  <li class="project-grid-item" data-engine="unity">
+    <a href="{{ project.url | relative_url }}">
+      <div class="project-thumb-wrap thumb">
+        <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
+        {% if forloop.first %}<span class="badge-latest">Latest</span>{% endif %}
+      </div>
+      <div class="project-title-bar">
+        <h3>{{ project.title }}</h3>
+        <img src="https://cdn.simpleicons.org/unity/111111" alt="Unity" class="project-engine-icon">
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+  {% assign unreal_projects = site.projects | where: "engine", "unreal" | sort: "order" %}
+  {% for project in unreal_projects %}
+  <li class="project-grid-item" data-engine="unreal">
+    <a href="{{ project.url | relative_url }}">
+      <div class="project-thumb-wrap thumb">
+        <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
+        {% if forloop.first %}<span class="badge-latest">Latest</span>{% endif %}
+      </div>
+      <div class="project-title-bar">
+        <h3>{{ project.title }}</h3>
+        <img src="https://cdn.simpleicons.org/unrealengine/111111" alt="Unreal Engine" class="project-engine-icon">
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
 
 <script>
-function switchEngine(btn, engine) {
-  document.querySelectorAll('.engine-card').forEach(function(c) {
-    c.classList.remove('active');
-    c.classList.add('inactive');
-  });
-  document.querySelectorAll('.engine-panel').forEach(function(p) { p.classList.remove('active'); });
+function filterProjects(btn, filter) {
+  document.querySelectorAll('.filter-tab').forEach(function(t) { t.classList.remove('active'); });
   btn.classList.add('active');
-  btn.classList.remove('inactive');
-  document.getElementById('panel-' + engine).classList.add('active');
+  document.querySelectorAll('.project-grid-item').forEach(function(item) {
+    if (filter === 'all' || item.dataset.engine === filter) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
 }
-
-document.querySelectorAll('.engine-card:not(.active)').forEach(function(c) {
-  c.classList.add('inactive');
-});
 </script>

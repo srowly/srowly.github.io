@@ -136,4 +136,4 @@ Strong placements in Theme and Innovation reflected what the mechanic was doing:
 
 > *"I definitely like the graphics and the strange world you've created. The mechanic may have some interesting aspects to it if you develop it some more."* — Chaoseed
 
-The consistent feedback around the first level being hard to parse is fair. In 48 hours the tutorial was the first thing we cut. The mechanic was strong enough that players wanted to push through anyway, which said something.
+Several players mentioned struggling to figure out the mechanic at first, which was fair: with 48 hours on the clock, we didn't get a chance to create a proper tutorial. If we were to take the project further, improving the intro and easing players into the soul link would be the obvious first step.
