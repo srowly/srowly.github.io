@@ -183,32 +183,16 @@ permalink: /
 </div>
 
 <ul class="project-grid">
-  {% assign unity_projects = site.projects | where: "engine", "unity" | sort: "order" %}
-  {% for project in unity_projects %}
-  <li class="project-grid-item" data-engine="unity">
+  {% assign all_projects = site.projects | sort: "order" %}
+  {% for project in all_projects %}
+  <li class="project-grid-item" data-engine="{{ project.engine }}">
     <a href="{{ project.url | relative_url }}">
-      <div class="project-thumb-wrap thumb">
+      <div class="project-thumb-wrap">
         <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
-        {% if forloop.first %}<span class="badge-latest">Latest</span>{% endif %}
       </div>
       <div class="project-title-bar">
         <h3>{{ project.title }}</h3>
-        <span class="engine-pill unity">Unity</span>
-      </div>
-    </a>
-  </li>
-  {% endfor %}
-  {% assign unreal_projects = site.projects | where: "engine", "unreal" | sort: "order" %}
-  {% for project in unreal_projects %}
-  <li class="project-grid-item" data-engine="unreal">
-    <a href="{{ project.url | relative_url }}">
-      <div class="project-thumb-wrap thumb">
-        <img src="{{ project.image_url | relative_url }}" alt="{{ project.title }}">
-        {% if forloop.first %}<span class="badge-latest">Latest</span>{% endif %}
-      </div>
-      <div class="project-title-bar">
-        <h3>{{ project.title }}</h3>
-        <span class="engine-pill unreal">Unreal</span>
+        <span class="engine-pill {{ project.engine }}">{{ project.engine | capitalize }}</span>
       </div>
     </a>
   </li>
@@ -216,6 +200,20 @@ permalink: /
 </ul>
 
 <script>
+function updateLatestBadges(filter) {
+  document.querySelectorAll('.badge-latest').forEach(function(b) { b.remove(); });
+  var engines = filter === 'all' ? ['unity', 'unreal'] : [filter];
+  engines.forEach(function(engine) {
+    var first = document.querySelector('.project-grid-item[data-engine="' + engine + '"]:not(.hidden)');
+    if (first) {
+      var badge = document.createElement('span');
+      badge.className = 'badge-latest';
+      badge.textContent = 'Latest';
+      first.querySelector('.project-thumb-wrap').appendChild(badge);
+    }
+  });
+}
+
 function filterProjects(btn, filter) {
   document.querySelectorAll('.filter-tab').forEach(function(t) { t.classList.remove('active'); });
   btn.classList.add('active');
@@ -226,5 +224,8 @@ function filterProjects(btn, filter) {
       item.classList.add('hidden');
     }
   });
+  updateLatestBadges(filter);
 }
+
+updateLatestBadges('all');
 </script>
