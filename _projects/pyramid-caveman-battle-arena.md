@@ -56,4 +56,4 @@ A YouTuber ended up playing the game with a friend and posted the session. Watch
 
 > *"Cool game guys!"* — jonask
 
-The most honest feedback came from the players who couldn't find an opponent to join — the nature of a multiplayer game submitted to a jam where most people are playing solo. The server dependency was a real limitation in that context. The physics quirks (yes, you could climb to the top of the pyramid) were unintended, but it turned out people enjoyed them.
+The main problem we found with obtaining feedback on a multiplayer game during a gamejam was players couldn't find an opponent to join. People were mostly playing and testing eachothers games solo and, with no way to arrange joint playtests, people rarely lined up. The physics quirks (yes, you could climb to the top of the pyramid) were unintended, but it turned out people enjoyed them.
