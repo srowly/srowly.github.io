@@ -3,7 +3,7 @@ layout: project
 title: "Pyramid Caveman Battle Arena"
 image_url: "/assets/images/pcba-header.jpg"
 engine: unity
-order: 5
+order: 4
 type: personal
 hide_header_image: true
 ---
