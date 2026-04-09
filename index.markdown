@@ -148,6 +148,27 @@ permalink: /
   color: #c0392b;
 }
 
+.type-pill {
+  font-size: 0.65em;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.type-pill.professional {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.type-pill.personal {
+  background: #faf5ff;
+  color: #7c3aed;
+}
+
 /* ── Latest badge ─────────────────────────────────────────── */
 .project-thumb-wrap {
   position: relative;
@@ -192,7 +213,10 @@ permalink: /
       </div>
       <div class="project-title-bar">
         <h3>{{ project.title }}</h3>
-        <span class="engine-pill {{ project.engine }}">{{ project.engine | capitalize }}</span>
+        <div style="display:flex; gap:5px; flex-shrink:0;">
+          <span class="engine-pill {{ project.engine }}">{{ project.engine | capitalize }}</span>
+          <span class="type-pill {{ project.type }}">{{ project.type | capitalize }}</span>
+        </div>
       </div>
     </a>
   </li>

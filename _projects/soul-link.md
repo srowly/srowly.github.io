@@ -4,6 +4,7 @@ title: "Soul Link"
 image_url: "/assets/images/soul-linked-header.png"
 engine: unity
 order: 4
+type: personal
 hide_header_image: true
 ---
 

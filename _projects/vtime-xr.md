@@ -4,6 +4,7 @@ title: "vTime XR"
 image_url: "/assets/images/vtime-header.png"
 engine: unity
 order: 3
+type: professional
 ---
 
 vTime XR was my first job as a programmer out of university, and looking back it was a remarkable place to start. vTime was one of the original social VR applications: a shared virtual space where people could meet, talk, and hang out in VR. This was before Meta had a social platform, before VRChat or Rec Room had taken off. We were building something genuinely new.

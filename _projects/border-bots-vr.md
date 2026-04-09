@@ -4,6 +4,7 @@ title: "Border Bots VR"
 image_url: "/assets/images/border-bots-header.png"
 engine: unity
 order: 2
+type: professional
 ---
 
 Border Bots VR is a fully released multi-platform virtual reality game, co-published with **Team17**, one of the UK's leading games publishers. Released on SteamVR, PSVR2, and Meta Quest, I served as a lead programmer across the full production cycle, from early prototyping through to certification and launch on all three platforms.

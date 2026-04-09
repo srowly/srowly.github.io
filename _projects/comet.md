@@ -4,6 +4,7 @@ title: "Comet"
 image_url: "/assets/images/comet-2.png"
 engine: unity
 order: 1
+type: personal
 ---
 
 Comet is a post-apocalyptic survival and base-building game in development. A passion project built by a small team of three: myself (Sam) and Alex on programming, with Ian on art.
