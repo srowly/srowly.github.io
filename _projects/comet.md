@@ -27,6 +27,12 @@ The game combines the genres we love: survival, homestead building, and a story-
 <a name="devlog-1"></a>
 ## Devlog #1 — The Beginning
 
-*[Your first devlog entry goes here.]*
-
 ![Comet — early development](/assets/images/comet-1.png)
+
+Comet started with a shared love of survival games and a clear vision: something that feels dangerous out in the world but cozy and safe once you're home. The three of us — Sam and Alex on programming, Ian on art — wanted to build the kind of game we actually want to play. Early on we settled on an isometric perspective, partly because we all love the genre. Games like **Final Fantasy Tactics**, **Baldur's Gate**, **Diablo**, and **Project Zomboid** were big reference points for us. Isometric gives the world a painterly quality that fits the tone we're going for, and it's a strong visual differentiator from the flood of straight top-down survival games out there.
+
+We're also using Comet as an opportunity to work with as many modern Unity features as possible rather than falling back on older patterns. So far the project is using **Addressables** for asset management, **Scriptable Objects** for data, the **Unity Tilemap system** for the ground, and **URP** for rendering. Next up we plan to bring in **UI Toolkit** for all interface work, **Shader Graph** for custom visuals, and **Cinemachine** for camera control. The goal is to come away from this project with hands-on experience across the current Unity ecosystem, not just a finished game.
+
+In terms of what's actually in and working: we have a save and load system built on JSON, farmable tiles and crops, trees that can be felled with an axe, an inventory system, a dialogue system, and a day/night cycle that shifts the light source and takes the world dark. It's a solid foundation and it already feels like a place worth being in.
+
+Next up: Sam is moving onto the UI using Unity's new UI Toolkit, and Alex is working on shadows and a house interior to better sell the day/night cycle. More soon.
