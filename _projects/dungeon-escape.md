@@ -3,7 +3,7 @@ layout: project
 title: "Dungeon Escape"
 image_url: "/assets/images/dungeon-escape-header.png"
 engine: unreal
-order: 3
+order: 1
 type: personal
 ---
 

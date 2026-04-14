@@ -3,7 +3,7 @@ layout: project
 title: "Sam Unreal"
 image_url: "/assets/images/sam-unreal.png"
 engine: unreal
-order: 1
+order: 3
 type: personal
 hide_header_image: true
 ---
