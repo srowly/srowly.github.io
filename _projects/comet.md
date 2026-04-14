@@ -20,7 +20,9 @@ The game combines the genres we love: survival, homestead building, and a story-
 
 *[Your second devlog entry goes here.]*
 
-![Comet — current state](/assets/images/comet-2.png)
+<video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 16px 0;">
+  <source src="/assets/video/comet-2.mp4" type="video/mp4">
+</video>
 
 ---
 
