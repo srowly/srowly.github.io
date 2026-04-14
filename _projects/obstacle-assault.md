@@ -89,7 +89,7 @@ void AObstacleAssaultPlayerController::ResetPlayer()
 
 ## Level Building
 
-The level is built on top of the [Stylized Eastern Village](https://www.fab.com/listings/9841fee2-683f-4e68-adb8-bafec270a251) asset pack from the Fab marketplace, which provides the environment and atmosphere. The actual platforming — the obstacles, the moving platforms, the routes players climb — is built from props taken from [Construction Site VOL. 1](https://www.fab.com/listings/ba44a508-bfa5-444c-bbf4-69e8b5dee530) and arranged around the C++ moving platform actors. The character is the [Survival Character Free](https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e) pack.
+The level is built on top of the [Stylized Eastern Village](https://www.fab.com/listings/9841fee2-683f-4e68-adb8-bafec270a251) asset pack from the Fab marketplace, which provides the environment and atmosphere. The actual platforming — the obstacles, the moving platforms, the routes players climb — is built from props taken from [Construction Site VOL. 1](https://www.fab.com/listings/ba44a508-bfa5-444c-bbf4-69e8b5dee530) and incorporated into my MovingPlatform actors. The character is the [Survival Character Free](https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e) pack.
 
 Worth a special mention: Unreal's **geometry brush** system. Additive and subtractive CSG shapes that let you block out structural geometry directly in the editor without any meshes — stairs, ramps, platforms, walls, all buildable in minutes. It's a quick and satisfying way to prototype a level before committing to final assets. I was very impressed with it.
 
