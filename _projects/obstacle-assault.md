@@ -12,17 +12,17 @@ hide_header_image: true
   <source src="/assets/video/obstacle.mp4" type="video/mp4">
 </video>
 
-After proving I could work in Unreal with Blueprints, the obvious next step was C++. Sam Unreal showed me the engine. Obstacle Assault was where I learned to actually program in it.
+After proving I could work in Unreal with Blueprints, the next step was C++. I bought a course on Udemy, Unreal Engine 5 C++ Game Development, which guides you through the development of 4 video games. The first game was Obstacle Assault.
 
-The game is a **Foddian** title — a genre named after Bennett Foddy, developer of *Getting Over It*. Games where you climb high, make one bad jump, and watch yourself tumble back to somewhere embarrassingly far below where you started. The genre is designed to be frustrating by nature. I can report that it succeeds. I may have tested the game more than was strictly necessary in the name of QA.
+The game is a **Foddian** title — a genre named after Bennett Foddy, developer of *Getting Over It*. Games where you climb high, make one bad jump, and watch yourself tumble back to somewhere embarrassingly far below where you started. The genre is designed to be frustrating by nature. I can report that it succeeds. I had to play the game a lot to get the above video.
 
 ---
 
 ## From Blueprints to C++
 
-Coming off Sam Unreal — which was Blueprints-only — the jump to C++ was the point of this project. Not just writing C++ that compiles, but understanding how Unreal's C++ layer actually works: how classes relate to Actors, how the engine calls into your code, and how to expose the right things to the editor without hardcoding values you'll need to change.
+Coming off Sam Unreal — which was Blueprints-only — the jump to C++ was the point of this project. Understanding how Unreal's C++ layer actually works: how classes relate to Actors, how the engine calls into your code, and how to expose the right things to the editor without hardcoding values you'll need to change.
 
-The two main classes I wrote were `AMovingPlatform` and `AObstacleAssaultPlayerController`, and between them they covered most of what a first proper C++ Unreal project should touch.
+The two main classes I wrote were `AMovingPlatform` and `AObstacleAssaultPlayerController`.
 
 ---
 
@@ -62,23 +62,36 @@ if (distance >= MoveDistance)
 
 ## AObstacleAssaultPlayerController
 
-The player controller was where I spent more time and encountered more of Unreal's modern API surface. A few things stood out:
+The player controller was the more involved of the two classes and introduced me to parts of Unreal I hadn't touched before. A few things worth calling out:
 
-**Enhanced Input System.** Rather than using Unreal's legacy input (which is effectively deprecated at this point), the controller uses the Enhanced Input System with `UInputMappingContext` arrays — one set of contexts for standard play, a separate set excluded on mobile. This is the current recommended approach and it's more flexible than the old axis/action binding system once you understand how contexts layer.
+**Enhanced Input System.** Input is handled through `UInputMappingContext` arrays — one set of contexts for standard play, a separate set excluded on mobile. Binding actions to functions uses `EIC->BindAction`, with `ETriggerEvent::Started` controlling when the callback fires.
 
-**Mobile support.** The controller detects touch interfaces via `SVirtualJoystick::ShouldDisplayTouchInterface()` and conditionally spawns a mobile controls widget. Using `TSubclassOf<UUserWidget>` for the widget class reference keeps it type-safe and designer-configurable in the editor rather than hardcoded.
+```cpp
+if (UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(InputComponent))
+{
+    EIC->BindAction(ResetAction, ETriggerEvent::Started, this, &AObstacleAssaultPlayerController::ResetPlayer);
+}
+```
 
-**Respawn system.** This was my own addition, not part of the course material — added primarily as a debugging aid to quickly reset myself back to the start without restarting the whole session. For a Foddian game where you're constantly testing jumps and platform timings, being able to teleport back to the beginning on a button press saves a lot of time. Getting it working meant connecting several systems I hadn't used together before: `FTransform`, `GetAuthGameMode()`, `FindPlayerStart()`, and `SetActorTransform()`. Small in scope but genuinely self-directed, and a good early lesson in navigating Unreal's framework without a guide.
+**Respawn system.** This was my own addition, not part of the course material — added primarily as a debugging aid to quickly reset myself back to the start without restarting the whole session. For a Foddian game where you're constantly testing jumps and platform timings, being able to teleport back to the beginning on a button press saves a lot of time. Getting it working meant connecting several systems I hadn't used together before: `FTransform`, `GetAuthGameMode()`, `FindPlayerStart()`, and `SetActorTransform()`.
 
-**TObjectPtr.** The widget pointer uses `TObjectPtr<UUserWidget>` rather than a raw pointer. This is Unreal's modern smart pointer wrapper for UObject references, introduced as a best practice to enable better garbage collection tracking. It's a small choice that signals familiarity with where the engine is heading.
+```cpp
+void AObstacleAssaultPlayerController::ResetPlayer()
+{
+    if (APawn* MyPawn = GetPawn())
+    {
+        MyPawn->SetActorTransform(RespawnTransform);
+    }
+}
+```
 
 ---
 
 ## Level Building
 
-Levels were built with Unreal's geometry brush system — additive and subtractive CSG shapes that let you block out a space quickly without importing any meshes. Stairs, ramps, platforms: all buildable in minutes. Coming from Unity where level blocking typically means dropping primitive GameObjects around, the geometry brush workflow felt significantly faster for structural shapes.
+The level is built on top of the [Stylized Eastern Village](https://www.fab.com/listings/9841fee2-683f-4e68-adb8-bafec270a251) asset pack from the Fab marketplace, which provides the environment and atmosphere. The actual platforming — the obstacles, the moving platforms, the routes players climb — is built from props taken from [Construction Site VOL. 1](https://www.fab.com/listings/ba44a508-bfa5-444c-bbf4-69e8b5dee530) and arranged around the C++ moving platform actors. The character is the [Survival Character Free](https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e) pack.
 
-Assets came from the Fab marketplace: [Construction Site VOL. 1](https://www.fab.com/listings/ba44a508-bfa5-444c-bbf4-69e8b5dee530), [Survival Character Free](https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e), and [Stylized Eastern Village](https://www.fab.com/listings/9841fee2-683f-4e68-adb8-bafec270a251).
+Worth a special mention: Unreal's **geometry brush** system. Additive and subtractive CSG shapes that let you block out structural geometry directly in the editor without any meshes — stairs, ramps, platforms, walls, all buildable in minutes. It's a quick and satisfying way to prototype a level before committing to final assets. I was very impressed with it.
 
 ---
 
