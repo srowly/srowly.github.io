@@ -115,7 +115,7 @@ Coming from Unity, I assumed visual scripting would feel limiting pretty quickly
   </div>
   <div class="bp-controls">
     <button class="bp-arrow" onclick="bpNav(-1)">&#8249;</button>
-    <p class="bp-caption" id="bpCaption">Coin — overlap detection, sound management, HUD communication, and actor self-disable on collection</p>
+    <p class="bp-caption" id="bpCaption">Coin - overlap detection, sound management, HUD communication, and actor self-disable on collection</p>
     <div class="bp-pips">
       <span class="bp-pip active" onclick="bpGoTo(0)"></span>
       <span class="bp-pip" onclick="bpGoTo(1)"></span>
@@ -128,9 +128,9 @@ Coming from Unity, I assumed visual scripting would feel limiting pretty quickly
 <script>
 (function() {
   var captions = [
-    "Coin — overlap detection, sound management, HUD communication, and actor self-disable on collection",
-    "Character — Enhanced Input System, Spring Arm camera with mouse-driven rotation and scroll-wheel zoom",
-    "Windmill — Event Tick driven rotation with an exposed Speed variable"
+    "Coin - overlap detection, sound management, HUD communication, and actor self-disable on collection",
+    "Character - Enhanced Input System, Spring Arm camera with mouse-driven rotation and scroll-wheel zoom",
+    "Windmill - Event Tick driven rotation with an exposed Speed variable"
   ];
   var current = 0;
   function update() {
@@ -165,7 +165,7 @@ Small thing, but the tabs and filter system in the Unreal content browser is gen
 
 ### PaperZD is excellent
 
-For anyone doing 2D animation in Unreal: [PaperZD](https://www.fab.com/listings/6664e3b5-e376-47aa-a0dd-f7bbbd5b93c0) is worth using. The editor is clean, the workflow is intuitive, and setting up animation state machines felt faster than I expected. I followed a video tutorial to get the initial setup done, but after that it was easy to build on top of. Easily the best 2D animation tooling I've used in any engine.
+For anyone doing 2D animation in Unreal: [PaperZD](https://www.fab.com/listings/6664e3b5-e376-47aa-a0dd-f7bbbd5b93c0) is worth using. The editor is clean, the workflow is intuitive, and setting up animation state machines felt faster than I expected. I followed a video tutorial to get the initial setup done, but after that it was easy to build on top of. Really impressive tooling and I'd happily use it again.
 
 ---
 

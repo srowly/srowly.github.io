@@ -20,11 +20,11 @@ hide_header_image: true
 
 Soul Link was built in 48 hours for a game jam, by a team of four: two programmers, two artists. The jam theme was "unconventional weapon," and after a brainstorming session we landed on the idea of the player's weapon being their own suffering: a soul link that bound an enemy to the player, causing anything that happened to the player to happen to them instead.
 
-The mechanic opened up a surprisingly rich set of puzzle possibilities. In the game you can link to the boulder blocking your path and take fall damage to shatter it. Link to a frozen enemy and take fire damage to thaw it. Link to an enemy standing in fire and walk through it unharmed, the damage passing through the link instead. The weapon is not a sword or a gun — it is consequence, redirected.
+The mechanic opened up a surprisingly rich set of puzzle possibilities. In the game you can link to the boulder blocking your path and take fall damage to shatter it. Link to a frozen enemy and take fire damage to thaw it. Link to an enemy standing in fire and walk through it unharmed, passing the damage through the link instead.
 
-Programming the enemy types was one of the most enjoyable parts of the project. Each enemy had to be designed around a specific damage type and vulnerability, so the puzzle design and the code were tightly coupled from the start. Getting that to feel coherent in 48 hours, across a split team working in parallel, was a genuine challenge and a genuinely good time.
+Programming the enemy types was one of the most enjoyable parts of the project. Each enemy had to be designed around a specific damage type and vulnerability, so the puzzle design and the code were tightly coupled from the start. Getting that to feel coherent in 48 hours, across a split team working in parallel, was a lot of fun.
 
-This was also one of my first experiences collaborating on a project as a group: coordinating through source control, dividing up gameplay features, and integrating art and code under a hard deadline. It was a formative experience in how to actually ship something with other people.
+This was also one of my first times collaborating on a project as a group: coordinating through source control, dividing up gameplay features, and integrating art and code under a hard deadline. I learned a lot about how to actually ship something with other people.
 
 ---
 
@@ -119,7 +119,7 @@ Out of **2,821 entries**, Soul Link placed:
   </div>
 </div>
 
-Strong placements in Theme and Innovation reflected what the mechanic was doing: the soul link was a direct and legible answer to the jam brief, and reviewers responded to that. The Graphics score was a credit to the art team working under the same deadline.
+We were really happy with the Theme and Innovation placements. The soul link fit the brief well and people seemed to respond to that. The Graphics score was down to the art team doing great work under the same deadline.
 
 ---
 

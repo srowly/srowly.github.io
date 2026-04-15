@@ -22,7 +22,7 @@ hide_header_image: true
 
 ## The Game
 
-Pyramid Caveman Battle Arena is a multiplayer first-person arena shooter. Cavemen battle for control of a pyramid using rocks, spears, and — naturally — a VCR launcher that fires VHS tapes. The jam theme was ancient technology, and we leaned into it.
+Pyramid Caveman Battle Arena is a multiplayer first-person arena shooter. Cavemen battle for control of a pyramid using rocks, spears, and of course a VCR launcher that fires VHS tapes. The jam theme was ancient technology, and we leaned into it.
 
 The game runs on a host/client setup and was built by a team of five: two artists and three programmers. This was a deliberate step up in ambition from our previous jam: we wanted to try something genuinely difficult and go multiplayer.
 
@@ -38,7 +38,7 @@ We got it working. Players could host and join sessions, move around the pyramid
 
 ## The Highlight
 
-A YouTuber ended up playing the game with a friend and posted the session. Watching it with the team was one of those moments you don't forget — seeing someone outside your circle pick up something you built and have fun with it. She spoke about it favourably, which meant a lot.
+A YouTuber ended up playing the game with a friend and posted the session. Watching it with the team was brilliant: seeing someone outside your circle pick up something you built and actually have fun with it. She spoke about it favourably, which meant a lot.
 
 <a href="https://youtu.be/ZHYBCFbdIKA?t=47" target="_blank" rel="noopener" style="display:inline-block; margin: 8px 0 24px; padding: 10px 20px; background: #ff0000; color: #fff; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9em;">Watch on YouTube</a>
 

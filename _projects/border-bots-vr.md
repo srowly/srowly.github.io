@@ -98,7 +98,7 @@ The work ranged from high-level system architecture down to the kind of per-plat
 
 The headline feature of my work on Border Bots VR is **SamOS**: the in-world UI system that drives almost everything in the game. The name came from the team.
 
-The premise was that every piece of UI the player interacts with should exist inside the world itself rather than floating in screen space. No traditional menus. No HUDs. Instead, the player's workstation is equipped with an in-world computer terminal and a handheld tablet. Both are fully interactive VR objects. Every system the player needs to do their job runs through one of those two surfaces.
+The premise was that every piece of UI the player interacts with should exist inside the world itself rather than floating in screen space. There are no traditional menus or HUDs. The player's workstation is equipped with an in-world computer terminal and a handheld tablet. Both are fully interactive VR objects. Every system the player needs to do their job runs through one of those two surfaces.
 
 ### What SamOS does
 
@@ -110,7 +110,7 @@ The computer terminal and tablet together handle the full gameplay loop:
 
 - **Tool guidance.** When players need to use inspection tools (scanners, stamp dispensers, and similar equipment at the booth), SamOS surfaces the relevant guidance contextually. Rather than an external tutorial overlay, the game uses the terminal as the natural place to reference how things work, which keeps players inside the fiction.
 
-Building SamOS meant solving a specific VR UI problem: flat interfaces designed for screens don't translate cleanly into three-dimensional space, especially across platforms with different controller schemes. Everything had to be readable in a headset at varying angles, responsive to natural VR hand positioning, and performant enough not to introduce hitching on the more constrained hardware. Getting that right across Quest, PSVR2, and SteamVR was one of the more demanding parts of the project.
+Building SamOS meant figuring out how to make flat UI work in 3D space, across platforms with different controllers. Everything had to be readable in a headset at varying angles, responsive to how people naturally position their hands in VR, and performant enough to run smoothly on the more constrained hardware. Getting that right across Quest, PSVR2, and SteamVR took a lot of work.
 
 The result was a system the team cared enough about to name after me which I was very proud of.
 
@@ -118,9 +118,9 @@ The result was a system the team cared enough about to name after me which I was
 
 ## Booth Tools and Inspection Systems
 
-Beyond SamOS, I built the suite of physical interaction tools at the player's booth. The checkpoint workflow involves picking up and using a range of objects: scanners, stamps, document holders. Each of these needed to feel physically convincing in VR, which is a higher bar than it sounds.
+Beyond SamOS, I built the suite of physical interaction tools at the player's booth. The checkpoint workflow involves picking up and using a range of objects: scanners, stamps, document holders. Each of these needed to feel physically convincing in VR.
 
-VR players notice immediately when an object doesn't behave the way their hands expect. Weight, snap points, the moment a tool activates: all of it contributes to whether the interaction feels real or breaks immersion. I iterated extensively on the feel of each tool, adjusting grab offsets, interaction distances, and haptic feedback per platform until each one felt right in context.
+Getting the feel right took a lot of iteration. Weight, snap points, the moment a tool activates: small things that make or break the experience. I spent a lot of time adjusting grab offsets, interaction distances, and haptic feedback per platform until each tool felt natural in context.
 
 The stamp and document handling system in particular went through a lot of revision. Stamping a document is a simple action on paper, but making it feel satisfying and deliberate in VR, at the right moment in the player's decision flow, took genuine work to get right.
 
@@ -136,12 +136,12 @@ In practice this meant building a lightweight sequencing layer on top of the vid
 
 ## Shipping on Three Platforms
 
-Releasing on SteamVR, PSVR2, and Meta Quest simultaneously is a meaningful technical undertaking. Each platform has its own controller API, performance profile, certification requirements, and quirks. A system that works cleanly on PC VR may need substantial revision to run acceptably on a standalone headset, and Sony's certification process has specific requirements that can surface late if you're not tracking them from early in development.
+Releasing on SteamVR, PSVR2, and Meta Quest simultaneously is a big job. Each platform has its own controller API, performance profile, certification requirements, and quirks. A system that works cleanly on PC VR may need substantial revision to run acceptably on a standalone headset, and Sony's certification process has specific requirements that can surface late if you're not tracking them from early in development.
 
 I worked across all three platform targets throughout the project, not just at the end. That meant building with platform differences in mind from the start rather than porting after the fact: conditional controller bindings, scalable render settings, and interaction systems that accounted for the physical differences in how each headset's controllers are held and used.
 
-Co-publishing with **Team17** added a layer of external scrutiny to the process that I found valuable. Meeting their standards for certification readiness and quality bar across platforms is not trivial, and shipping through that pipeline on a title that reviewed this well is something I'm proud of.
+Co-publishing with **Team17** meant meeting their standards for certification readiness and quality across all platforms. It was a high bar and I'm proud we cleared it.
 
 ---
 
-Consistent positive reception across all three storefronts, across very different player communities with different expectations of VR, is the kind of validation that matters. The systems I built are the ones players spend the most time with: the UI, the tools, the inspection loop. That those systems held up is something I'm genuinely pleased about.
+Getting positive reviews across all three storefronts felt really good. The systems I built are the ones players spend the most time with: the UI, the tools, the inspection loop. Knowing those systems held up means a lot to me.

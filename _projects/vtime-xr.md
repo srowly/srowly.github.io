@@ -7,7 +7,7 @@ order: 3
 type: professional
 ---
 
-vTime XR was my first job as a programmer out of university, and looking back it was a remarkable place to start. vTime was one of the original social VR applications: a shared virtual space where people could meet, talk, and hang out in VR. This was before Meta had a social platform, before VRChat or Rec Room had taken off. We were building something genuinely new.
+vTime XR was my first job as a programmer out of university, and it was a great place to start. vTime was one of the original social VR applications: a shared virtual space where people could meet, talk, and hang out in VR. This was before Meta had a social platform, before VRChat or Rec Room had taken off. We were building something genuinely new.
 
 I worked on this for just over three years, working across the full breadth of the application.
 
@@ -19,7 +19,7 @@ I worked on this for just over three years, working across the full breadth of t
 
 ## The Platform
 
-vTime XR let users create a personal avatar and join virtual spaces with friends and strangers from anywhere in the world. You could sit around a campfire in the Arctic, on a beach, on the moon. The experience was built around presence and conversation: the simple but surprisingly powerful idea that being in a shared virtual space with someone, even at low fidelity, feels meaningfully different from a phone call.
+vTime XR let users create a personal avatar and join virtual spaces with friends and strangers from anywhere in the world. You could sit around a campfire in the Arctic, on a beach, on the moon. The experience was built around presence and conversation: being in a shared virtual space with someone, even at low fidelity, feels genuinely different from a phone call.
 
 The platform launched on Samsung Gear VR and grew from there. By the time I left, it was running on eight platforms simultaneously.
 
@@ -58,12 +58,12 @@ Areas I worked across included:
 
 **Media viewing.** In-world video and image viewing so users could share content inside the virtual space. Getting video to perform acceptably across the range of hardware targets we supported, from a standalone mobile headset to a PC-connected VR system, required careful attention to decoding and streaming behaviour per platform.
 
-Working across all of these areas in a live product, early in my career, gave me a breadth of experience that would have taken much longer to accumulate in a more narrowly-scoped role.
+Working across all of these areas in a live product, early in my career, gave me a really broad foundation that I've built on ever since.
 
 ---
 
 ## What I Took Away
 
-vTime XR taught me multi-platform development the hard way: not as a theoretical exercise but as a production requirement with real certification stakes and real users on every target. It also introduced me to the specific challenges of networked, social real-time applications, where state consistency, latency, and user experience are inseparable problems.
+vTime XR taught me multi-platform development the hard way: real certification stakes, real users on every target, and real consequences if something broke. It also introduced me to the specific challenges of networked, social real-time applications, where state consistency, latency, and user experience are all tied together.
 
-Starting my career on a platform that was genuinely ahead of its time, building technology that the larger industry is still catching up to, was a formative experience. The problems we were solving in that small team are problems that are now discussed at the scale of major platforms. I am glad I got to work on them early.
+Looking back, I feel lucky to have started my career there. Social VR was still a new idea, and the problems we were working on in that small team are the same ones that much bigger companies are tackling now. It was a brilliant first job.
