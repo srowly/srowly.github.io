@@ -28,7 +28,7 @@ The two main classes I wrote were `AMovingPlatform` and `AObstacleAssaultPlayerC
 
 ## AMovingPlatform
 
-The moving platform actor handles both translational and rotational movement. Velocity, rotation speed, and travel distance are all `UPROPERTY(EditAnywhere)` — editable per-instance in the editor without touching code. This was one of the first things that clicked properly: the `UPROPERTY` macro is conceptually similar to `[SerializeField]` in Unity C#, but the range of specifiers (`EditAnywhere`, `VisibleAnywhere`, `EditDefaultsOnly`, etc.) gives you finer-grained control over what's visible where.
+The moving platform actor handles both translational and rotational movement. Velocity, rotation speed, and travel distance are all `UPROPERTY(EditAnywhere)` — editable per-instance in the editor without touching code. The `UPROPERTY` macro is conceptually similar to `[SerializeField]` in Unity C#, but the range of specifiers (`EditAnywhere`, `VisibleAnywhere`, `EditDefaultsOnly`, etc.) gives finer-grained control over what's exposed where in the editor.
 
 ```cpp
 UPROPERTY(EditAnywhere)
@@ -62,7 +62,7 @@ if (distance >= MoveDistance)
 
 ## AObstacleAssaultPlayerController
 
-The player controller was the more involved of the two classes and introduced me to parts of Unreal I hadn't touched before. A few things worth calling out:
+The player controller was the more involved of the two classes and covered more of Unreal's Gameplay Framework. A few things worth calling out:
 
 **Enhanced Input System.** Input is handled through `UInputMappingContext` arrays — one set of contexts for standard play, a separate set excluded on mobile. Binding actions to functions uses `EIC->BindAction`, with `ETriggerEvent::Started` controlling when the callback fires.
 
@@ -97,9 +97,9 @@ Worth a special mention: Unreal's **geometry brush** system. Additive and subtra
 
 ## What Changed From Sam Unreal
 
-Sam Unreal was a useful orientation exercise but it didn't require me to think about engine architecture. This project did. Understanding why member variables live in header files, why you use `::` for class scope and `.` for instance scope, what `UCLASS` and `GENERATED_BODY()` are actually doing, when to use a macro versus a function — these are the things that separate "I can write Unreal code" from "I understand what it's doing."
+Sam Unreal was a useful orientation exercise but it stayed within Blueprints. This project was about getting into Unreal's Gameplay Framework through C++: the `UCLASS`/`UPROPERTY`/`GENERATED_BODY()` macro system, how Actors fit into the world lifecycle, how the engine's reflection system ties C++ to the editor, and where the boundary between C++ and Blueprints should sit.
 
-Blueprint child classes still have a role: the visual components of the moving platforms are set up in Blueprint subclasses of the C++ parent, which keeps art assets out of code and lets designers tweak things without a recompile. That separation between logic in C++ and presentation in Blueprint is a pattern worth building habits around early.
+That last point is worth expanding. The visual components of the moving platforms are set up in Blueprint subclasses of the C++ parent class, which keeps art assets and tweakable values out of code. Designers can adjust things without a recompile, and the core logic stays in C++ where it belongs. That separation is a deliberate architectural pattern and one I wanted to get comfortable with early.
 
 The `eject` feature deserves a mention: pressing Eject mid-play breaks you out of the player controller and lets you fly around the scene freely while the game is still running. It is extremely useful for debugging why a platform is in the wrong place, and extremely tempting to just use to admire your level.
 
@@ -107,6 +107,6 @@ The `eject` feature deserves a mention: pressing Eject mid-play breaks you out o
 
 ## Takeaway
 
-Obstacle Assault completed the move from Unreal-as-a-visitor to Unreal-as-a-programmer. The foundations are in place: actor lifecycle, property system, input, basic math, mobile considerations, and the Blueprint/C++ split. The next project will be less about foundations and more about building something with real depth.
+Obstacle Assault completed the move from Unreal-as-a-visitor to Unreal-as-a-programmer. The foundations are in place: Unreal's actor lifecycle, property system, Enhanced Input, mobile considerations, and the Blueprint/C++ architectural split. The next project will be less about foundations and more about building something with real depth.
 
 Up next: **Dungeon Escape** — a first-person 3D dungeon crawler with interactive puzzles. A genre I have a lot of personal history with and a good deal more ambition for.
