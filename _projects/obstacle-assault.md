@@ -14,7 +14,7 @@ hide_header_image: true
 
 After proving I could work in Unreal with Blueprints, the next step was C++. I bought a course on Udemy, Unreal Engine 5 C++ Game Development, which guides you through the development of 4 video games. The first game was Obstacle Assault.
 
-The game is a **Foddian** title, a genre named after Bennett Foddy, developer of *Getting Over It*. Games where you climb high, make one bad jump, and watch yourself tumble back to somewhere embarrassingly far below where you started. The genre is designed to be frustrating by nature. I can report that it succeeds. I had to play the game a lot to get the above video.
+The game is a **Foddian** title, a genre named after Bennett Foddy, developer of *Getting Over It*. Games where you climb high, make one bad jump, and watch yourself fall all the way back down. The genre is designed to be frustrating and I can report that it succeeds. I had to play the game a lot to get the above video.
 
 ---
 
@@ -28,7 +28,7 @@ The two main classes I wrote were `AMovingPlatform` and `AObstacleAssaultPlayerC
 
 ## AMovingPlatform
 
-The moving platform actor handles both translational and rotational movement. Velocity, rotation speed, and travel distance are all `UPROPERTY(EditAnywhere)`, editable per-instance in the editor without touching code. The `UPROPERTY` macro is conceptually similar to `[SerializeField]` in Unity C#, but the range of specifiers (`EditAnywhere`, `VisibleAnywhere`, `EditDefaultsOnly`, etc.) gives finer-grained control over what's exposed where in the editor.
+The moving platform actor handles both translational and rotational movement. Velocity, rotation speed, and travel distance are all `UPROPERTY(EditAnywhere)`, editable per-instance in the editor without touching code. The `UPROPERTY` macro is conceptually similar to `[SerializeField]` in Unity C#, but the range of specifiers (`EditAnywhere`, `VisibleAnywhere`, `EditDefaultsOnly`, etc.) gives easier control over what's exposed where in the editor.
 
 ```cpp
 UPROPERTY(EditAnywhere)
@@ -64,7 +64,7 @@ if (distance >= MoveDistance)
 
 The player controller was the more involved of the two classes and covered more of Unreal's Gameplay Framework. A few things worth calling out:
 
-**Enhanced Input System.** Input is handled through `UInputMappingContext` arrays: one set of contexts for standard play, a separate set excluded on mobile. Binding actions to functions uses `EIC->BindAction`, with `ETriggerEvent::Started` controlling when the callback fires.
+**Enhanced Input System.** Input is handled through `UInputMappingContext` arrays. Binding actions to functions uses `EIC->BindAction`, with `ETriggerEvent::Started` controlling when the callback fires.
 
 ```cpp
 if (UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(InputComponent))
@@ -73,7 +73,7 @@ if (UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(InputComponent)
 }
 ```
 
-**Respawn system.** This was my own addition, not part of the course material, added primarily as a debugging aid to quickly reset myself back to the start without restarting the whole session. For a Foddian game where you're constantly testing jumps and platform timings, being able to teleport back to the beginning on a button press saves a lot of time. Getting it working meant connecting several systems I hadn't used together before: `FTransform`, `GetAuthGameMode()`, `FindPlayerStart()`, and `SetActorTransform()`.
+**Respawn system.** This was my own addition, not part of the course material, added primarily as a debugging aid to quickly reset myself back to the start without restarting. For a Foddian game where you're constantly failing jumps and platform timings, being able to reset back to the beginning on a button press saves a lot of time. Getting it working meant connecting several systems I hadn't used together before: `FTransform`, `GetAuthGameMode()`, `FindPlayerStart()`, and `SetActorTransform()`.
 
 ```cpp
 void AObstacleAssaultPlayerController::ResetPlayer()
@@ -97,7 +97,7 @@ Worth a special mention: Unreal's **geometry brush** system. Additive and subtra
 
 ## What Changed From Sam Unreal
 
-Sam Unreal was a useful orientation exercise but it stayed within Blueprints. This project was about getting into Unreal's Gameplay Framework through C++: the `UCLASS`/`UPROPERTY`/`GENERATED_BODY()` macro system, how Actors fit into the world lifecycle, how the engine's reflection system ties C++ to the editor, and where the boundary between C++ and Blueprints should sit.
+Sam Unreal was a fun project, but it stayed within Blueprints. This project was about getting into Unreal's Gameplay Framework through C++: the `UCLASS`/`UPROPERTY`/`GENERATED_BODY()` macro system, how Actors fit into the world lifecycle, how the engine's reflection system ties C++ to the editor, and where the boundary between C++ and Blueprints should sit.
 
 That last point is worth expanding. The visual components of the moving platforms are set up in Blueprint subclasses of the C++ parent class, which keeps art assets and tweakable values out of code. Designers can adjust things without a recompile, and the core logic stays in C++ where it belongs. That separation is a deliberate architectural pattern and one I wanted to get comfortable with early.
 
@@ -107,6 +107,6 @@ The `eject` feature deserves a mention: pressing Eject mid-play breaks you out o
 
 ## Takeaway
 
-Obstacle Assault completed the move from Unreal-as-a-visitor to Unreal-as-a-programmer. The foundations are in place: Unreal's actor lifecycle, property system, Enhanced Input, mobile considerations, and the Blueprint/C++ architectural split. The next project will be less about foundations and more about building something with real depth.
+Obstacle Assault completed the move from Unreal-as-a-visitor to Unreal-as-a-programmer. The foundations are in place: Unreal's actor lifecycle, property system, Enhanced Input, mobile considerations, and the Blueprint/C++ architectural split.
 
-Up next: **Dungeon Escape**, a first-person 3D dungeon crawler with interactive puzzles. A genre I have a lot of personal history with and a good deal more ambition for.
+Up next: **Dungeon Escape**, a first-person 3D dungeon crawler with interactive puzzles. A genre I have a lot of personal history with and a good deal more ambition for. This project will be less about foundations and more about building something with real depth.
