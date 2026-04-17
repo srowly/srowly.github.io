@@ -18,11 +18,19 @@ The game combines the genres we love: survival, homestead building, and a story-
 <a name="devlog-2"></a>
 ## Devlog #2 - Second Entry
 
-*[Your second devlog entry goes here.]*
-
 <video autoplay loop muted playsinline style="width:100%; border-radius:8px; margin: 16px 0;">
   <source src="/assets/video/comet-2.mp4" type="video/mp4">
 </video>
+
+So much has changed since blog 1, I don't even know where to begin!
+
+As you can see in the video, a lot of systems have advanced, I've fleshed out our UI using Unity's new UI system, UI Toolkit, implemented crafting, and inventory systems. Alex has handled transitioning between scenes, as seen in the video by moving inside the cabin (which Ian has drawn beautifully) as well as the shadow system, which we had to create from scratch as Unity's 2d lighting system wasn't fit for our art style.
+
+We have also made significant progress in several other areas you cant see in the video, I've added and implemented localization using Unity's localization package, Ive added sound mixers and audio channels, rain particle effect and Alex has implemented a full character dialogue system!
+
+Ian's made several assets that have yet to be implemented, including a work bench and title screen. 
+
+I plan to write in more detail about how we've implemented all these features, but for now this small summary and the video will have to do, stay tuned!
 
 ---
 
