@@ -14,7 +14,7 @@ hide_header_image: true
 
 Our studio ran four consecutive Friday afternoons as a friendly internal competition: every programmer picks up Unreal Engine and builds something from scratch, blueprints only, no C++. At the end, the team votes for their favourite. This was my first time touching Unreal Engine, coming from about a decade of Unity work.
 
-The whole company voted: programmers, designers, artists. The result? I won. The game was called **Sam Unreal**. By deadline I had run out of both time to develop the game and to think of a name.
+The whole company voted: programmers, designers, artists and I won! The game was called **Sam Unreal**. By deadline I had run out of both time to develop the game and to think of a name.
 
 ---
 
