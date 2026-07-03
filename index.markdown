@@ -193,7 +193,7 @@ permalink: /
 
 <p class="bio">I'm a Senior Programmer with a decade of experience in multi-platform game development. My primary expertise is <strong>Unity</strong> and <strong>C#</strong>, with growing experience in <strong>Unreal Engine</strong> and <strong>C++</strong> through ongoing personal projects. Most recently, I worked at vTime Games on an unannounced title in partnership with a major UK Publisher, before that on <strong>Border Bots VR</strong>, co-published with Team17 and released across Steam, PSVR2, and Meta Quest to strong reviews on all three platforms. I hold an <strong>MSc in Computer Science with Distinction</strong> from the University of Liverpool.</p>
 
-<p class="bio">I'm currently <strong>open to new opportunities</strong>. If you're looking for an experienced programmer, I'd love to hear from you — feel free to get in touch!</a>.</p>
+<p class="bio">I'm currently <strong>open to new opportunities</strong>. If you're looking for an experienced programmer, I'd love to hear from you — feel free to get in touch!</p>
 
 <div class="filter-bar">
   <button class="filter-tab active" data-filter="all" onclick="filterProjects(this, 'all')">All Projects</button>
